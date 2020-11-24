@@ -1,6 +1,7 @@
 body{
     text-align: center;
     background-color: rgb(146, 116, 173);
+    font-family: Arial, sans-serif;
 }
 h1{
     font-family: Arial, sans-serif;
@@ -41,7 +42,11 @@ p.two-colors{
 }
 .recomend{
     width: 300px;
-    margin: 150px auto 0;
+    margin: 100px auto 0;
     border: 2px solid black;
     background-color: #797979;
+}
+.colorwheel{
+    margin-top: 60px;
+    font-size: 30px;
 }

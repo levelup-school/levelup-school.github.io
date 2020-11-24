@@ -4,6 +4,8 @@
 }
 $redorange: #df5925;
 $white: #ddd;
+$emerald: #194e43;
+$darkemerald: #031f13;
 body{
     font-family: 'Trebuchet MS', Arial, sans-serif;
     background-color: #292929;
@@ -65,8 +67,8 @@ body{
         display: block;
         width: 250px;
         height: 250px;
-        background-color: #315e70;
-        border: 7px solid #0f1c22;
+        background-color: $emerald;
+        border: 7px solid $darkemerald;
         border-radius: 10px;
         transition: all .3s;
         text-decoration: none;
