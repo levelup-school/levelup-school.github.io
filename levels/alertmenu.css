@@ -1,0 +1,36 @@
+#alertwin{
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 260px;
+    background-color: #1b1917f3;
+    animation: animwin 1s ease forwards;
+}
+@keyframes animwin{
+    0% {top: -220px;}
+    100% {top: 10%;}
+}
+#alertwin P{
+    color: #d8c8bb;
+}
+.ready-btn{
+    text-decoration: none;
+    margin: 15px 15px 0;
+    font-size: 20px;
+    padding: 7px 15px;
+    background-color: rgb(0, 195, 255);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.ready-btn:hover{
+    background-color: rgb(255, 94, 0);
+}
