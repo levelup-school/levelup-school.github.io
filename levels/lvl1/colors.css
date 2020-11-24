@@ -1,0 +1,80 @@
+body{
+    text-align: center;
+    background-color: rgb(146, 116, 173);
+}
+h1{
+    font-family: Arial, sans-serif;
+    background-color: #e0d640;
+    border-radius: 15px;
+    width: 350px;
+    letter-spacing: 7px;
+    margin: 20px auto;
+}
+.yellow{
+    color: #e0d640;
+}
+.purple{
+    color: rgb(116, 5, 116);
+}
+.green{
+    color: rgb(3, 82, 3);
+}
+.red{
+    color: rgb(172, 23, 23);
+}
+.blue{
+    color: rgb(28, 77, 212);
+}
+.orange{
+    color: rgb(240, 159, 10);
+}
+h2.two-colors{
+    text-decoration: underline;
+}
+p.two-colors{
+    font-size: 20px;
+}
+.start-p{
+    border-top: 2px dashed black;
+    font-size: 30px;
+    margin-top: 110px;
+}
+.recomend{
+    width: 300px;
+    margin: 150px auto 0;
+    border: 2px solid black;
+    background-color: #797979;
+}
+#alertwin{
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 220px;
+    background-color: #1b1917f3;
+    animation: animwin 1s ease forwards;
+}
+@keyframes animwin{
+    0% {top: -220px;}
+    100% {top: 10%;}
+}
+#alertwin P{
+    color: #d8c8bb;
+}
+#ready-btn{
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 7px 15px;
+    background-color: rgb(0, 195, 255);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+#ready-btn:hover{
+    background-color: rgb(255, 94, 0);
+}
