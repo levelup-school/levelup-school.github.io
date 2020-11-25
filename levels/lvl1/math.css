@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(210, 231, 231);
+    font-family: Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    letter-spacing: 55px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.znak{
+    padding: 20px 0;
+    width: 100px;
+    font-size: 50px;
+    text-align: center;
+    background-color: tomato;
+}
+.blue{
+    background-color: #1887d1;
+    margin-left: 100px;
+}
+.yellow{
+    background-color: #d1c518;
+    margin-left: 200px;
+}
+.gray{
+    background-color: #838383;
+    margin-left: 300px;
+}
+.primer{
+    font-size: 30px;
+}
+p.link{
+    text-align: center;
+}
+a.link{
+    background-color: #caa095;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.math{
+    width: 1300px;
+    margin: 50px auto 10px;
+}
+.bluue{
+    background-color: black;
+    padding: 3px;
+    color: rgb(111, 118, 180);
+}
+Ol{
+    padding-bottom: 25px;
+    border-bottom: 2px dashed #c52b2b;
+}
+.dell{
+    text-align: right;
+}
+.text2{
+    font-size: 25px;
+    text-align: center;
+}
+#hh2{
+    color: blue;
+}
+.calcul{
+    font-size: 25px;
+    text-align: center;
+    background-color: brown;
+    width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+}
+.calcul a{
+    color: white;
+    text-decoration: none
+}
