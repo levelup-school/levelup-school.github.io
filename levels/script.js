@@ -1,6 +1,6 @@
 const passWin = document.getElementById('passWin'),
     passInput = document.getElementById('pass-input'),
-    pass2 = [0, 1, 'exam2', 'ex3'];
+    pass2 = [0, 1, 'ex2', '3xm'];
 
 let link,
     password;
