@@ -13,9 +13,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
-        <h1>Выберите задание:</h1>
-        <p>Необходимо сверстать (сделать) один из сайтов представленных ниже.</p>
+        <div class="container">
+            <div class="header__logo">
+                <a href="https://up-school.online/">
+                    <img src="img/upschool2.png" alt="Upschool" height="60">
+                </a>
+            </div>
+            <div class="header__title">
+                <h1>Выберите задание:</h1>
+                <p>Необходимо сверстать (сделать) один из сайтов представленных ниже.</p>    
+            </div>
+        </div>
     </header>
 
     <main class="sites">
@@ -42,15 +52,15 @@
                 <h2 class="sites__title">Уровень 2</h2>
 
                 <div class="sites__items">
-                    <a class="sites__item" href="">
+                    <a class="sites__item" href="javascript: pass.show('lvl2/chemistry.html', 2)">
                         <h3>Тема:<br><span>Химия</span></h3>
                         <img src="img/chemistry.png" alt="" height="140">
                     </a>
-                    <a class="sites__item" href="">
+                    <a class="sites__item" href="javascript: pass.show('lvl2/minecraft.html', 2)">
                         <h3>Тема:<br><span>Майнкрафт</span></h3>
                         <img src="img/sword.png" alt="" height="140">
                     </a>
-                    <a class="sites__item" href="">
+                    <a class="sites__item" href="javascript: pass.show('lvl2/CSStyle.html', 2)">
                         <h3>Тема:<br><span>CSS</span></h3>
                         <img src="img/css.png" alt="" height="140">
                     </a>
@@ -58,5 +68,16 @@
             </div>
         </div>
     </main>
+
+    <div id="passWin" class="passWin">
+        <p>Введите пароль:</p>
+        <input id="pass-input" class="passWin__input" type="password" autocomplete="off" maxlength="10">
+        <div>
+            <button type='button' onclick="pass.check()">Ввод</button>
+            <button type='button' onclick="pass.hide(event, 1)">Закрыть</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>

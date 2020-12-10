@@ -10,6 +10,7 @@ body{
     font-family: 'Trebuchet MS', Arial, sans-serif;
     background-color: #292929;
     color: $white;
+    position: relative;
 }
 .container{
     width: 100%;
@@ -18,8 +19,13 @@ body{
 }
 // header
 .header{
-    padding: 70px 0;
-    text-align: center;
+    padding: 10px 0 90px;
+    &__logo{
+
+    }
+    &__title{
+        text-align: center;
+    }
     h1{
         margin: 15px 0;
         letter-spacing: 6px;
@@ -107,4 +113,52 @@ body{
     50%{top: 260px; left: 260px;}
     75%{top: -15px; left: 260px;}
     100%{top: -15px; left: -15px;}
+}
+
+.passWin{
+    display: none;
+    text-align: center;
+    padding: 40px;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(17, 17, 17, 0.827);
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    &__input{
+        margin: 40px 0 10px;
+        padding: 7px;
+        background-color: #4d9c96;
+        border: 1px solid $emerald;
+    }
+    button{
+        background-color: $redorange;
+        border: none;
+        padding: 7px 15px;
+        border-radius: 3px;
+        &:hover{
+            background-color: $emerald;
+            cursor: pointer;
+        }
+    }
+}
+.win2{
+    animation: win2 1.5s ease;
+}
+@keyframes win2{
+    0%{top: -20%;}
+    100%{top: 20%;}
+}
+.win2wrong{
+    animation: win2wrong .8s ease-in;
+}
+@keyframes win2wrong{
+    15%{left: 51%; background-color: rgb(202, 52, 52);}
+
+    40%{left: 49.5%;;}
+
+    65%{left: 50.5%; background-color:  rgb(202, 52, 52);}
+    85%{left: 49.6%; background-color: rgba(17, 17, 17, 0.827);}
 }

@@ -8,7 +8,7 @@
     transform: translateX(-50%);
     width: 450px;
     height: 260px;
-    background-color: #1b1917f3;
+    background-color: rgba(27, 25, 23, 0.953);
     animation: animwin 1s ease forwards;
 }
 @keyframes animwin{

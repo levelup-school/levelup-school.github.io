@@ -7,6 +7,7 @@ body {
   font-family: 'Trebuchet MS', Arial, sans-serif;
   background-color: #292929;
   color: #ddd;
+  position: relative;
 }
 
 .container {
@@ -16,7 +17,10 @@ body {
 }
 
 .header {
-  padding: 70px 0;
+  padding: 10px 0 90px;
+}
+
+.header__title {
   text-align: center;
 }
 
@@ -186,6 +190,104 @@ body {
   100% {
     top: -15px;
     left: -15px;
+  }
+}
+
+.passWin {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  width: 300px;
+  height: 150px;
+  background-color: rgba(17, 17, 17, 0.827);
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 25px;
+}
+
+.passWin__input {
+  margin: 40px 0 10px;
+  padding: 7px;
+  background-color: #4d9c96;
+  border: 1px solid #194e43;
+}
+
+.passWin button {
+  background-color: #df5925;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 3px;
+}
+
+.passWin button:hover {
+  background-color: #194e43;
+  cursor: pointer;
+}
+
+.win2 {
+  -webkit-animation: win2 1.5s ease;
+          animation: win2 1.5s ease;
+}
+
+@-webkit-keyframes win2 {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes win2 {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+.win2wrong {
+  -webkit-animation: win2wrong .8s ease-in;
+          animation: win2wrong .8s ease-in;
+}
+
+@-webkit-keyframes win2wrong {
+  15% {
+    left: 51%;
+    background-color: #ca3434;
+  }
+  40% {
+    left: 49.5%;
+  }
+  65% {
+    left: 50.5%;
+    background-color: #ca3434;
+  }
+  85% {
+    left: 49.6%;
+    background-color: rgba(17, 17, 17, 0.827);
+  }
+}
+
+@keyframes win2wrong {
+  15% {
+    left: 51%;
+    background-color: #ca3434;
+  }
+  40% {
+    left: 49.5%;
+  }
+  65% {
+    left: 50.5%;
+    background-color: #ca3434;
+  }
+  85% {
+    left: 49.6%;
+    background-color: rgba(17, 17, 17, 0.827);
   }
 }
 /*# sourceMappingURL=style.css.map */
