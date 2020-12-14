@@ -3,13 +3,12 @@ body{
     font-family: Arial;
 }
 h1{
-    font-family: 'Trebuchet MS', sans-serif;
     letter-spacing: 7px;
     color: chocolate;
+
 }
 .crimson{
     color: crimson;
-    text-decoration: underline;
 }
 h3{
     text-align: center;
