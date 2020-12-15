@@ -18,3 +18,16 @@ h3{
     width: 100px;
     color: rgb(215, 230, 215);
 }
+.chapter-link{
+    color: brown;
+    background-color: rgb(214, 232, 233);
+    padding: 7px;
+    border-radius: 5px;
+    margin: 7px;
+}
+.img2{
+    border: 3px solid rgb(216, 82, 20)
+}
+.color3{
+    color: rgb(51, 139, 240);
+}
