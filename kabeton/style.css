@@ -1,0 +1,41 @@
+body{
+    
+    background-color: #84a792;
+    
+}
+.first-block{
+    text-align: center;
+    border: 2px dotted black;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.text-menu{
+    color: #32706c;
+}
+.pic-kobe{
+    border: 4px solid rgb(211, 103, 31);
+}
+h3{
+    font-size: 14px;
+}
+span{
+    color: rgb(104, 47, 24);
+}
+.adress{
+    color: #d45726;
+    font-size: 20px;
+    font-weight: 600;
+}
+.header{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.header a{
+    margin-left: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.header a:hover{
+    color: red;
+}
