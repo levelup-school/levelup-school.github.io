@@ -1,0 +1,63 @@
+body{
+    font-family: Arial;
+    text-align: center;
+    background-color: #9e9ac4;
+}
+.chem-title{
+    letter-spacing: 20px;
+    width: 300px;
+    margin: 0 auto;
+    color: #9e9ac4;
+    border-radius: 10px;
+    background-color: #a3ec44;
+}
+.img-vessel{
+    margin: 50px 0;
+    padding: 20px 0;
+    border-top: 5px solid #dd5617;
+    border-bottom: 5px solid #dd5617;
+}
+.atom-list{
+    border: 10px solid #9c3f13;
+    padding: 25px 35px;
+    text-align: left;
+    width: 100px;
+    margin: 0 auto;
+}
+.p-link{
+    margin-top: 50px;
+}
+.link{
+    background-color: #a3ec44;
+    padding: 7px 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.active{
+    background-color: #72a331;
+}
+.wiki{
+    margin-top: 50px;
+}
+.wiki a{
+    text-decoration: none;
+    color: rgb(187, 181, 181);
+    background: rgb(71, 71, 71);
+    padding: 5px 8px;
+    border-radius: 7px;
+}
+/* page 2 */
+.atom-title{
+    text-decoration: underline;
+    color: rgb(133, 54, 30);
+}
+.color1{
+    color: greenyellow;
+}
+.color2{
+    color: rgb(91, 8, 245);
+}
+.color3{
+    color: rgb(207, 63, 27) ;
+}
