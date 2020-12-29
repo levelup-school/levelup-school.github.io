@@ -30,7 +30,7 @@ let pass = {
     pressEnter: function(event){
         if (event.keyCode == 13){
             event.preventDefault();
-            pass.check()
+            pass.check();
         }
     },
     check: function(){
@@ -46,7 +46,9 @@ let pass = {
         block.classList.add(clsName);
         setTimeout(()=>{
             block.classList.remove(clsName);
-        }, time)
+        }, time);
     }
-}
+};
 //window.location.href = link;
+
+console.log (1+1);
