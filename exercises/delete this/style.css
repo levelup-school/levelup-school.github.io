@@ -1,6 +1,15 @@
-.top-text{
-    margin-bottom: 70px;
+body{
+    text-align: center;
+    font-size: 30px;
 }
-.bot-text{
-    margin-top: 100px;
+.txt1{
+    width: 120px;
+    background-color: rgb(131, 157, 179);
+    margin: 30px auto;
+}
+.txt2{
+    width: 150px;
+    background-color: rgb(173, 121, 61);
+    margin: 0 auto;
+    padding: 15px 0;
 }
