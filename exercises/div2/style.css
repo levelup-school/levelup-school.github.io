@@ -1,6 +1,21 @@
 #cats{
     background-color: #b87d6e;
+    padding: 7px;
 }
 #dogs{
-    background-color: rgb(121, 148, 119);
+    background-color: #799477;
+    padding: 7px;
+}
+#cats div{
+    width: 500px;
+    margin: 5px auto;
+    padding: 15px;
+    border: 2px solid black;
+}
+#dogs div{
+    width: 500px;
+    margin: 5px auto;
+    padding: 15px;
+    border: 2px dashed black;
+    background-color: #adcfab;
 }
