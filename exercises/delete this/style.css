@@ -1,0 +1,31 @@
+body{
+    font-family: Arial;
+}
+div{
+    background-color: #b45b3b;
+    padding: 7px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 30px;
+    transition: all 1s ease;
+}
+h1{
+    padding: 7px;
+    width: 350px;
+    border-radius: 7px;
+    margin: 20px auto;
+    color: #5cada7;
+    background-color: crimson;
+}
+div p{
+    color: rgb(87, 161, 87);
+}
+div:hover{
+    background-color: darkmagenta;
+}
+span{
+    color: black;
+    font-size: 40px;
+}

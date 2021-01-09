@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+}
+
+.posR {
+  position: relative;
+}
+
+.posA {
+  position: absolute;
+}
+
+.field {
+  margin: 100px auto 30px;
+  width: 480px;
+  height: 360px;
+}
+
+.field__overflow {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.field__img {
+  height: 100%;
+  width: 100%;
+}
+
+.field__cat {
+  bottom: 180px;
+  cursor: pointer;
+  left: 240px;
+  -webkit-transform: translateX(-50%) translateY(50%);
+          transform: translateX(-50%) translateY(50%);
+}
+
+.vertical {
+  bottom: 0px;
+  left: -40px;
+}
+
+.vertical input {
+  cursor: pointer;
+  -webkit-writing-mode: bt-lr;
+      -ms-writing-mode: bt-lr;
+          writing-mode: bt-lr;
+  /* IE */
+  -webkit-appearance: slider-vertical;
+  /* WebKit */
+  width: 8px;
+  height: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical p {
+  margin-bottom: 20px;
+}
+
+.horizont {
+  bottom: -40px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.horizont input {
+  cursor: pointer;
+  width: 480px;
+  padding: 0;
+  margin: 0;
+}
+
+.horizont p {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=coordinate.css.map */
