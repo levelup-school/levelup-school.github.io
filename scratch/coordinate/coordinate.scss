@@ -11,6 +11,26 @@ body{
 .posA{
     position: absolute;
 }
+.title1{
+    position: relative;
+    margin: 10px 0 100px;
+    font-family:  'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    &::after{
+        content: ' ';
+        position: absolute;
+        width: 300px;
+        height: 1px;
+        background-color: #5f400a;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    span{
+        color: #ffab19;
+    }
+}
 .go-to{
     background-color: #4c97ff;
     color: white;
