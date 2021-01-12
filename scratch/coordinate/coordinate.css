@@ -15,8 +15,27 @@ body {
   position: absolute;
 }
 
+.go-to {
+  background-color: #4c97ff;
+  color: white;
+  width: 250px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 7px;
+  padding: 7px 5px;
+}
+
+.go-to__XY {
+  display: inline-block;
+  background-color: white;
+  width: 29px;
+  padding: 0 7px;
+  border-radius: 7px;
+  color: #000;
+}
+
 .field {
-  margin: 100px auto 30px;
+  margin: 30px auto 30px;
   width: 480px;
   height: 360px;
 }
@@ -52,6 +71,8 @@ body {
           writing-mode: bt-lr;
   /* IE */
   -webkit-appearance: slider-vertical;
+  /* WebKit */
+  -moz-appearance: slider-vertical;
   /* WebKit */
   width: 8px;
   height: 360px;

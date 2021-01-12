@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="coordinate.css">
 </head>
 <body>
+    <p class="go-to">Перейти в x: <span id="toX" class="go-to__XY">0</span> y: <span id="toY" class="go-to__XY">0</span></p>
+    
     <div class="field posR">
         <div class="field__overflow posR">
             <img class="field__img" src="../img/coordinate.png" alt="" width="480" height="360">
@@ -14,7 +16,6 @@
                 <img src="../img/cat.png" alt="" height="50">
             </div>
         </div>
-
         <div class="vertical posA">
             <p>Y</p>
             <input id="coorY" type="range" min="-180" max="180" value="0" onmousemove="setY()">
@@ -23,10 +24,7 @@
             <input id="coorX" type="range" min="-240" max="240" value="0" onmousemove="setX()">
             <p>X</p>
         </div>
-        
-        
     </div>
-    
 
     <script src="coordinate.js"></script>
 </body>
