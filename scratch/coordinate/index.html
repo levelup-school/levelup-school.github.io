@@ -9,21 +9,26 @@
 </head>
 <body>
     <h1 class="title1"><span>Scratch</span> координаты</h1>
-    <p class="go-to">Перейти в x: <span id="toX" class="go-to__XY">0</span> y: <span id="toY" class="go-to__XY">0</span></p>
+    <p class="go-to">
+        Перейти в x:
+        <input id="toX" class="go-to__XY" type="text" value="0" min="-240" max="240" maxlength="4" pattern="^[0-9][0-9]?$|^100$">
+        y:
+        <input id="toY" class="go-to__XY" type="text" value="0" min="-180" max="180"  maxlength="4">
+    </p>
     
     <div class="field posR">
         <div class="field__overflow posR">
             <img class="field__img" src="../img/coordinate.png" alt="" width="480" height="360">
             <div id="cat" class="field__cat posA">
-                <img src="../img/cat.png" alt="" height="50">
+                <img src="../img/cat.png" alt="" height="50" ondrag="asd()">
             </div>
         </div>
         <div class="vertical posA">
             <p>Y</p>
-            <input id="coorY" type="range" min="-180" max="180" value="0" onmousemove="setY()">
+            <input id="axisY" type="range" min="-180" max="180" value="0">
         </div>
         <div class="horizont posA">
-            <input id="coorX" type="range" min="-240" max="240" value="0" onmousemove="setX()">
+            <input id="axisX" type="range" min="-240" max="240" value="0">
             <p>X</p>
         </div>
     </div>

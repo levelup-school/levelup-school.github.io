@@ -1,6 +1,12 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  -moz-user-select: none;
+       user-select: none;
 }
 
 body {
@@ -50,12 +56,21 @@ body {
 }
 
 .go-to__XY {
+  border: none;
+  outline: none;
+  text-align: center;
   display: inline-block;
   background-color: white;
   width: 29px;
-  padding: 0 7px;
+  padding: 2px 7px;
   border-radius: 7px;
   color: #000;
+}
+
+.go-to__XY:focus {
+  border-radius: 7px;
+  -webkit-box-shadow: 2px 2px 15px inset  #f8c46b;
+          box-shadow: 2px 2px 15px inset  #f8c46b;
 }
 
 .field {

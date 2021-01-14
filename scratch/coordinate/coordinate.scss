@@ -1,6 +1,9 @@
 *{
     padding: 0;
     margin: 0;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none
 }
 body{
     font-family: Arial;
@@ -40,12 +43,19 @@ body{
     border-radius: 7px;
     padding: 7px 5px;
     &__XY{
+        border: none;
+        outline: none;
+        text-align: center;
         display: inline-block;
         background-color: white;
         width: 29px;
-        padding: 0 7px;
+        padding: 2px 7px;
         border-radius: 7px;
         color: #000;
+        &:focus{
+            border-radius: 7px;
+            box-shadow: 2px 2px 15px inset  #f8c46b;
+        }
     }
 }
 .field{
