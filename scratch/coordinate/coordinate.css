@@ -98,6 +98,18 @@ body {
           transform: translateX(-50%) translateY(50%);
 }
 
+.field__cat img {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.field__cat img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+}
+
 .vertical {
   bottom: 0px;
   left: -40px;

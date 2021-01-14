@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-
+    
+    
     const field = document.querySelector('.field'),
         axisX = document.getElementById('axisX'),
         axisY = document.getElementById('axisY'),
@@ -7,36 +8,43 @@ document.addEventListener('DOMContentLoaded', ()=>{
         inputY = document.getElementById('toY'),
         cat = document.getElementById('cat');
 
+    let zoomRatio = 1 / window.devicePixelRatio,
+        techX = 240,
+        techY = 180;
+
+
+    window.addEventListener('resize', (e)=>{
+        zoomRatio = 1 / window.devicePixelRatio;
+    });
 
     function setX (inputCase, x){
         
         if (inputCase == 1){
-            x = +axisX.value + 240;
+            techX = +axisX.value + 240;
             inputX.value = axisX.value;
         } else if (inputCase == 2){
-            x = +inputX.value + 240;
+            techX = +inputX.value + 240;
             axisX.value = inputX.value;    
         } else {
-            axisX.value = +axisX.value + x;
-            inputX.value = x = axisX.value;
-            x = parseInt(x) + 240;
+            techX = techX + x * zoomRatio;
+            axisX.value = inputX.value = Math.round(techX) - 240;
         }
-        cat.style.left = x + "px";
+        cat.style.left = techX + "px";
+        console.log (cat.style.left);
     }
 
     function setY (inputCase, y){
         if (inputCase == 1){
-            y = +axisY.value + 180;
+            techY = +axisY.value + 180;
             inputY.value = axisY.value;
         } else if (inputCase == 2) {
-            y = +inputY.value + 180;
+            techY = +inputY.value + 180;
             axisY.value = inputY.value;
         } else {
-            axisY.value = +axisY.value - y;
-            inputY.value = y = axisY.value;
-            y = parseInt(y) + 180;
+            techY = techY - y * zoomRatio;
+            axisY.value = inputY.value = Math.round(techY) - 180;
         }
-        cat.style.bottom = y + "px";
+        cat.style.bottom = techY + "px";
     }
     
     
@@ -59,7 +67,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         field.addEventListener('mousemove', setCoor);
 
         function setCoor (e){
-            console.log(e.movementX);
             setY(3, e.movementY);
             setX(3, e.movementX);
         }
