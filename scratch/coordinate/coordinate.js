@@ -8,14 +8,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
         inputY = document.getElementById('toY'),
         cat = document.getElementById('cat');
 
-    let zoomRatio = 1 / window.devicePixelRatio,
+    let zoomRatio,
         techX = 240,
         techY = 180;
 
+    getRatio();
 
-    window.addEventListener('resize', (e)=>{
-        zoomRatio = 1 / window.devicePixelRatio;
+    window.addEventListener('resize', ()=>{
+        getRatio();
     });
+
+    function getRatio (){
+        if(navigator.vendor === ''){
+            zoomRatio = 1;
+        } else {
+            zoomRatio = 1 / window.devicePixelRatio;
+        }
+    }
 
     function setX (inputCase, x){
         
@@ -30,7 +39,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             axisX.value = inputX.value = Math.round(techX) - 240;
         }
         cat.style.left = techX + "px";
-        console.log (cat.style.left);
     }
 
     function setY (inputCase, y){

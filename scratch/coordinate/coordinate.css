@@ -56,6 +56,10 @@ body {
 }
 
 .go-to__XY {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -moz-user-select: text;
+       user-select: text;
   border: none;
   outline: none;
   text-align: center;

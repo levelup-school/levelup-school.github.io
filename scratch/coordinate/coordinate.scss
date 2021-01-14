@@ -3,7 +3,7 @@
     margin: 0;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none
+    user-select: none;
 }
 body{
     font-family: Arial;
@@ -35,6 +35,7 @@ body{
     }
 }
 .go-to{
+    
     background-color: #4c97ff;
     color: white;
     width: 250px;
@@ -43,6 +44,9 @@ body{
     border-radius: 7px;
     padding: 7px 5px;
     &__XY{
+        -webkit-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
         border: none;
         outline: none;
         text-align: center;
