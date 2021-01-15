@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         inputX = document.getElementById('toX'),
         inputY = document.getElementById('toY'),
         cat = document.getElementById('cat');
+    
 
     let zoomRatio,
         techX = 240,
