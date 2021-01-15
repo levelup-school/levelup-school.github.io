@@ -127,8 +127,6 @@ body {
   /* IE */
   -webkit-appearance: slider-vertical;
   /* WebKit */
-  -moz-appearance: slider-vertical;
-  /* WebKit */
   width: 8px;
   height: 360px;
   padding: 0;
@@ -156,5 +154,31 @@ body {
 
 .horizont p {
   margin-left: 20px;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  background: #217aad;
+}
+
+input[type=range]::-moz-range-track {
+  box-shadow: 1px 1px 1px #a3b0b6, 0px 0px 1px #a3b0b6;
+  background: #b6b6b6;
+  border-radius: 1.3px;
+  border: 0.2px solid #a3b0b6;
+}
+
+#axisX::-moz-range-track, #axisX::-moz-range-progress {
+  height: 5px;
+}
+
+#axisY::-moz-range-track, #axisY::-moz-range-progress {
+  width: 5px;
+}
+
+input[type=range]::-moz-range-progress {
+  background: #179be7;
 }
 /*# sourceMappingURL=coordinate.css.map */

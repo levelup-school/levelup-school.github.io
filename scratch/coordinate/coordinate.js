@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    
-    
+
     const field = document.querySelector('.field'),
         axisX = document.getElementById('axisX'),
         axisY = document.getElementById('axisY'),
@@ -14,9 +13,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     getRatio();
 
-    window.addEventListener('resize', ()=>{
-        getRatio();
-    });
+    window.addEventListener('resize', getRatio);
 
     function getRatio (){
         if(navigator.vendor === ''){
@@ -24,10 +21,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         } else {
             zoomRatio = 1 / window.devicePixelRatio;
         }
+        console.log(zoomRatio);
     }
 
     function setX (inputCase, x){
-        
         if (inputCase == 1){
             techX = +axisX.value + 240;
             inputX.value = axisX.value;
@@ -79,8 +76,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
             setX(3, e.movementX);
         }
         
-        document.addEventListener('mouseup', function(){
-            field.removeEventListener ('mousemove', setCoor);
+        field.addEventListener('mouseup', function(){
+            this.removeEventListener ('mousemove', setCoor);
+        });
+        field.addEventListener('mouseleave', function(){
+            this.removeEventListener ('mousemove', setCoor);
         });
     };
 });
