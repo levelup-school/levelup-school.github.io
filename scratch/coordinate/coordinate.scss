@@ -14,9 +14,26 @@ body{
 .posA{
     position: absolute;
 }
+.container{
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto
+}
+// header
+.header{
+    padding: 20px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        span,a{
+            width: 50px;
+        }
+    }
+}
+
 .title1{
     position: relative;
-    margin: 10px 0 100px;
+    margin: 10px 0 50px;
     font-family:  'Trebuchet MS', sans-serif;
     letter-spacing: 5px;
     text-align: center;
@@ -34,8 +51,8 @@ body{
         color: #ffab19;
     }
 }
+// main field
 .go-to{
-    
     background-color: #4c97ff;
     color: white;
     width: 250px;
