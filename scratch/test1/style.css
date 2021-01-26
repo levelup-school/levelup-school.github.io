@@ -24,11 +24,11 @@ h1 span{
 }
 .task-video{
     margin: 20px auto;
-    border: 14px solid #e4d594;
+    border: 14px solid #f3f1eb;
 }
 .tast-block{
     background: #dad6cb;
-    padding: 15px 30px;
+    padding: 30px;
     margin: 20px auto  40px;
     width: 600px;
 }
@@ -47,6 +47,7 @@ h1 span{
     margin-bottom: 30px;
     background: #bbb7ac;
     padding: 7px;
+    line-height: 31px;
 }
 ul{
     text-align: left;

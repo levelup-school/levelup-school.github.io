@@ -34,7 +34,6 @@ function showModal (){
     document.body.appendChild(fireworksScript);
 }
 function hideModal (){
-    fireworksScript.remove();
     modal.style.display = 'none';
     document.body.style.overflow = '';
 }
