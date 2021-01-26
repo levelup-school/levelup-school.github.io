@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Задачи</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <h1>Задачи по <span>Scratch</span></h1>
+    
     <p class="steps">1</p>
     <p>Посмотри видео ниже, чтобы понять <b>задание</b> (3 мин).</p>
-    <iframe class="task-video" width="628" height="343" src="https://www.youtube.com/embed/1EYew0NEqkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="task-video" width="628" height="343" src="https://www.youtube.com/embed/1EYew0NEqkg" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
     <p class="steps">2</p>
     <p class="test-play-title">Ты можешь сам потестировать как это работает в окне ниже,</p>
     <p class="test-play-title">чтобы начать - просто нажми на <span class="scratch green">флажок</span>.</p>
-    <iframe class="task-video" src="https://scratch.mit.edu/projects/478593021/embed" allowtransparency="true" width="628" height="462" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <iframe class="task-video" src="https://scratch.mit.edu/projects/478593021/embed" allowtransparency="true"
+        width="628" height="462" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
     <p class="steps">3</p>
     <div class="tast-block">
-        <p class="tast-title">Теперь тебе надо выполнить задания, с которыми ты познакомился выше.<br> <b class="underline">При нажатии на соответсвующие спрайты</b>:</p>
+        <p class="tast-title">Теперь тебе надо выполнить задания, с которыми ты познакомился выше.<br> <b
+                class="underline">При нажатии на соответсвующие спрайты</b>:</p>
         <p class="ready-title">готово:</p>
         <ul>
             <li class="task-item">
@@ -43,7 +53,8 @@
             </li>
             <li class="task-item">
                 <div class="tast-item-wrapper">
-                    <p><span class="scratch motion">вращение</span> спрайта на один оборот<br> (один оборот = 360 градусов);</p>
+                    <p><span class="scratch motion">вращение</span> спрайта на один оборот<br> (один оборот = 360
+                        градусов);</p>
                     <div class="toggle-button toggle-button--tuuli">
                         <input id="toggleButton3" type="checkbox">
                         <label for="toggleButton3"></label>
@@ -86,11 +97,26 @@
             </li>
         </ul>
     </div>
-    <button id="ready-btn" class="btn unready-btn" title="Сделай все задания и поставь все галочки напротив каждого задания.">Все сделал!</button>
+    <button id="ready-btn" class="btn unready-btn"
+        title="Сделай все задания и поставь все галочки напротив каждого задания.">Все сделал!</button>
     <footer class="footer">Успехов!</footer>
-    <div class="modal">
-        
+
+    <div class="posR">
+        <div class="modal">
+            <div class="modal-letter">
+                <h3>Молодец!</h3>
+                <p>Покажи результат учителю.</p>
+                <button class="btn ok-btn" onclick="hideModal()">ok</button>
+            </div>
+            <div class="background-plate">
+                <!-- no css required for this fireworks -->
+                <canvas id="canvas"></canvas>
+            </div>
+
+        </div>
     </div>
+
     <script src="jabba.js"></script>
 </body>
+
 </html>
