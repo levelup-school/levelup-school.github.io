@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1{
+    font-family: 'Comic Sans MS';
+    letter-spacing: 10px;
+    margin-bottom: 80px;
+}
+.underline{
+    font-size: 1.2em;
+    text-decoration: underline #5f504e;
+}
+h1 span{
+    font-size: 40px;
+    color: #f0c815;
+}
+.task-video{
+    margin: 20px auto;
+    border: 14px solid #e4d594;
+}
+.tast-block{
+    background: #dad6cb;
+    padding: 15px 30px;
+    margin: 20px auto  40px;
+    width: 600px;
+}
+.steps{
+    font-size: 50px;
+    color: crimson;
+    font-weight: bold;
+    margin: 70px 0 20px;
+}
+.ready-title{
+    text-align: right;
+    width: 480px;
+    margin: 0 auto;
+}
+.tast-title{
+    margin-bottom: 30px;
+    background: #bbb7ac;
+    padding: 7px;
+}
+ul{
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+}
+.task-item{
+    margin: 10px 0;
+    line-height: 25px;
+}
+.tast-item-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.scratch{
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+}
+.motion {
+    background-color: #126ed8;
+}
+.looks{
+    background-color: #791da3;
+}
+.variable{
+    background-color: #db7a20;
+}
+.green{
+    background-color: #21a021;
+}
+.test-play-title{
+    margin: 10px 0;
+}
+
+/* toggle buttons */
+.toggle-button {
+    margin: 0 20px; }
+
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    color: #fff; }
+.toggle-button label {
+    display: inline-block;
+    cursor: pointer;}
+.toggle-button input {
+    display: none; }
+.toggle-button__icon {
+    cursor: pointer;
+    pointer-events: none; }
+.toggle-button__icon:before, .toggle-button__icon:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    transition: 0.2s ease-out; }
+
+.toggle-button--tuuli label {
+    height: 30px;
+    line-height: 30px;
+    transition: all 0.2s;
+    border-radius: 50%; }
+.toggle-button--tuuli label:before, .toggle-button--tuuli label:after {
+    position: absolute;
+    right: 1rem;
+    transition: all 0.2s .1s ease-out; }
+
+.toggle-button--tuuli input[type=checkbox] + label {
+    width: 30px;
+    background: #FF5335; }
+.toggle-button--tuuli input[type=checkbox] + label:before {
+    opacity: 0;
+    transform: translate(0, 20px); }
+.toggle-button--tuuli input[type=checkbox] + label:after {
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ label {
+    width: 30px;
+    background: #61B136; }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ .toggle-button__icon:before {
+    transform: translate(-30%, 100%) rotate(45deg) scale(0.6, 1); }
+
+.toggle-button--tuuli input[type=checkbox]:checked ~ .toggle-button__icon:after {
+    transform: translate(20%) rotate(-45deg); }
+
+.toggle-button--tuuli .toggle-button__icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 0;
+    left: 0; }
+.toggle-button--tuuli .toggle-button__icon:before, .toggle-button--tuuli .toggle-button__icon:after {
+    width: 15px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 0 #0000001a;
+    margin-left: 35%;
+    top: 94%; }
+.toggle-button--tuuli .toggle-button__icon:before {
+    transform: rotate(45deg); }
+.toggle-button--tuuli .toggle-button__icon:after {
+    transform: rotate(-45deg); }
+
+.btn{
+    color: white;
+    padding: 7px 13px;
+    border: none;
+    outline: none;
+    border-radius: 13px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.unready-btn{
+    background: #8d9397;
+}
+.unready-btn:hover{
+    animation: unready 1s ease-in-out;
+}
+.ready-btn{
+    background: #1580c7;
+}
+.ready-btn:hover{
+    background: #57b4f3;
+}
+@keyframes unready{
+    0%{transform: translateX(0%);}
+    25%{transform: translateX(15%);background: #d81f12;}
+    75%{transform: translateX(-15%);background: #d81f12;}
+    100%{transform: translateX(0%);}
+}
+.footer{
+    margin: 50px 0 0;
+    background-color: #51523a;
+    padding: 75px 0;
+    text-align: center;
+    color: #cfbf8a;
+    font-size: 50px;
+}
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: .5;
+    overflow: hidden;
+    background: #000;
+}

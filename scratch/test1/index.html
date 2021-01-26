@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Задачи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Задачи по <span>Scratch</span></h1>
+    <p class="steps">1</p>
+    <p>Посмотри видео ниже, чтобы понять <b>задание</b> (3 мин).</p>
+    <iframe class="task-video" width="628" height="343" src="https://www.youtube.com/embed/1EYew0NEqkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p class="steps">2</p>
+    <p class="test-play-title">Ты можешь сам потестировать как это работает в окне ниже,</p>
+    <p class="test-play-title">чтобы начать - просто нажми на <span class="scratch green">флажок</span>.</p>
+    <iframe class="task-video" src="https://scratch.mit.edu/projects/478593021/embed" allowtransparency="true" width="628" height="462" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+    <p class="steps">3</p>
+    <div class="tast-block">
+        <p class="tast-title">Теперь тебе надо выполнить задания, с которыми ты познакомился выше.<br> <b class="underline">При нажатии на соответсвующие спрайты</b>:</p>
+        <p class="ready-title">готово:</p>
+        <ul>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p>увеличивается <span class="scratch variable">переменная</span> на 1;</p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton1" type="checkbox">
+                        <label for="toggleButton1"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p>изменяется <span class="scratch looks">размер</span> спрайта;</p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton2" type="checkbox">
+                        <label for="toggleButton2"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p><span class="scratch motion">вращение</span> спрайта на один оборот<br> (один оборот = 360 градусов);</p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton3" type="checkbox">
+                        <label for="toggleButton3"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p>изменяется <span class="scratch looks">видимость (прозрачность)</span> спрайта;</p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton4" type="checkbox">
+                        <label for="toggleButton4"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p><span class="scratch motion">перемещение</span> спрайта сверху вниз;</p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton5" type="checkbox">
+                        <label for="toggleButton5"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="task-item">
+                <div class="tast-item-wrapper">
+                    <p>
+                        <span class="scratch motion">перемещение</span> спрайта сверху вниз,
+                        но с вращением и "эффектом отскакивания" (тоже перемещение).
+                    </p>
+                    <div class="toggle-button toggle-button--tuuli">
+                        <input id="toggleButton6" type="checkbox">
+                        <label for="toggleButton6"></label>
+                        <div class="toggle-button__icon"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button id="ready-btn" class="btn unready-btn" title="Сделай все задания и поставь все галочки напротив каждого задания.">Все сделал!</button>
+    <footer class="footer">Успехов!</footer>
+    <div class="modal">
+        
+    </div>
+    <script src="jabba.js"></script>
+</body>
+</html>
