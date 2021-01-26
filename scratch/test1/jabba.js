@@ -28,5 +28,5 @@ listItems.forEach(item =>{
 })
 
 function showModal (){
-    alert('hi');
+    alert('Молодец! Покажи результат учителю.');
 }
