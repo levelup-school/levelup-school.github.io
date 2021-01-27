@@ -1,0 +1,51 @@
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+.background-plate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: .8;
+    background: #000000;
+    z-index: -1;
+}
+.modal-letter{
+    background-color: #c87027;
+    width: 400px;
+    margin: 50px auto 20px;
+    padding: 15px 0;
+    color: #ffffff;
+}
+.modal-letter h3{
+    letter-spacing: 10px;
+    margin: 15px 0;
+    font-size: 30px;
+}
+.modal-letter p{
+    font-size: 17px;
+}
+.ok-btn{
+    margin: 40px auto 15px;
+    padding: 7px 25px;
+    background-color: #2a93b3;
+}
+.ok-btn:hover{
+    padding: 7px 50px;
+    background-color: #5bb8d4;
+}
+canvas{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    max-width: 1200px;
+}

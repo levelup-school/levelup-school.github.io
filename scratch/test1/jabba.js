@@ -1,39 +1,52 @@
-const listItems = document.querySelectorAll('[type="checkbox"]'),
-    readyBtn = document.getElementById('ready-btn'),
-    modal = document.querySelector('.modal');
+'use strict';
 
-let numCheckedCheckers = 0;
-let fireworksScript = document.createElement("script");
-fireworksScript.setAttribute("src", "JQjabba.js");
+(function(){
+    const listItems = document.querySelectorAll('[type="checkbox"]'),
+        readyBtn = document.getElementById('ready-btn'),
+        modal = document.querySelector('.modal'),
+        okBtn = document.querySelector('.ok-btn');
 
-listItems.forEach(item =>{
-    item.value = 'off';
-    item.addEventListener('click', () =>{
-        if (item.value == 'off'){
-            item.value = 'on';
-            numCheckedCheckers += 1;
-        } else {
-            item.value = 'off';
-            numCheckedCheckers -= 1;
-        }
-        if (numCheckedCheckers == 6){
-            readyBtn.classList.remove ('unready-btn');
-            readyBtn.classList.add ('ready-btn');
-            readyBtn.addEventListener('click', showModal);
-        } else {
-            readyBtn.classList.remove ('ready-btn');
-            readyBtn.classList.add ('unready-btn');
-            readyBtn.removeEventListener('click', showModal);
-        }
+    // fireworks script to turn on it only on readyBtn click (because animation)
+    let fireworksScript = document.createElement("script");
+    fireworksScript.setAttribute("src", "../js/JQjabba.js");
+
+    let numCheckedCheckers = 0,
+        numCheckers = listItems.length;
+
+    listItems.forEach(item =>{
+        item.value = 'off';
+        item.addEventListener('click', () =>{
+            if (item.value == 'off'){
+                item.value = 'on';
+                numCheckedCheckers += 1;
+            } else {
+                item.value = 'off';
+                numCheckedCheckers -= 1;
+            }
+            if (numCheckedCheckers == numCheckers){
+                readyBtn.classList.remove ('unready-btn');
+                readyBtn.classList.add ('ready-btn');
+                readyBtn.addEventListener('click', showModal);
+            } else {
+                readyBtn.classList.remove ('ready-btn');
+                readyBtn.classList.add ('unready-btn');
+                readyBtn.removeEventListener('click', showModal);
+            }
+        });
     });
-});
 
-function showModal (){
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    document.body.appendChild(fireworksScript);
-}
-function hideModal (){
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-}
+    function showModal (){
+        modal.style.display = 'block';
+        okBtn.addEventListener('click', hideModal, {once: true});
+        document.body.style.overflow = 'hidden';
+        // add fireworks JQuery script to start animation
+        document.body.appendChild(fireworksScript);
+    }
+
+    function hideModal (){
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        console.log ('asd');
+    }
+}());
+

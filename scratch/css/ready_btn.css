@@ -1,0 +1,29 @@
+/* button */
+.btn{
+    color: white;
+    padding: 7px 13px;
+    border: none;
+    outline: none;
+    border-radius: 13px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.unready-btn{
+    background: #8d9397;
+}
+.unready-btn:hover{
+    animation: unready 1s ease-in-out;
+}
+.ready-btn{
+    background: #1580c7;
+}
+.ready-btn:hover{
+    background: #57b4f3;
+}
+@keyframes unready{
+    0%{transform: translateX(0%);}
+    25%{transform: translateX(15%);background: #d81f12;}
+    75%{transform: translateX(-15%);background: #d81f12;}
+    100%{transform: translateX(0%);}
+}
