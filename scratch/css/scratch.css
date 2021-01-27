@@ -1,17 +1,193 @@
-.scratch{
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    --blue:  #4c97ff;
+    --orange: #f9a83a;
+    --purple: #9966ff;
+    --redorange: #ff8c1a;
+    --green: #4cbf56;
+    --lblue: #eaf3ff;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.posR{
+    position: relative;
+}
+/* headers */
+.scratch-title{
+    font-family: 'Comic Sans MS';
+    letter-spacing: 10px;
+}
+.step{
+    font-size: 50px;
+    font-weight: bold;
+}
+/* span plate, bg, colors */
+.s-plate{
     color: white;
     padding: 7px;
     border-radius: 7px;
 }
-.motion {
-    background-color: #126ed8;
+.orange{
+    color: var(--orange);
 }
-.looks{
-    background-color: #791da3;
+.blue{
+    color: var(--blue);
 }
-.variable{
-    background-color: #db7a20;
+.purple{
+    color: var(--purple);
+}
+.redorange{
+    color: var(--redorange);
 }
 .green{
-    background-color: #21a021;
+    color: var(--green);
+}
+.motion {
+    background-color: var(--blue);
+}
+.looks{
+    background-color: var(--purple);
+}
+.control {
+    background-color: #ffab19;
+}
+.variable{
+    background-color: var(--redorange);
+}
+.green-flag{
+    background-color: var(--green);
+}
+.lblue-bg{
+    background-color: var(--lblue);
+}
+.b-bor{
+    margin: 20px auto;
+    border: 14px solid var(--lblue);
+}
+
+/* footer */
+.footer{
+    margin: 50px 0 0;
+    background-color: #363636;
+    padding: 75px 0;
+    text-align: center;
+    font-size: 30px;
+}
+.footer a{
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* margin padding */
+/* mar top bot */
+.my-1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.my-3{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.my-4{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.my-5{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* mar left right */
+.mx-a{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* mar top */
+.mt-1{
+    margin-top: 10px;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.mt-4{
+    margin-top: 40px;
+}
+.mt-5{
+    margin-top: 50px;
+}
+/* mar bot */
+.mb-1{
+    margin-bottom: 10px;
+}
+.mb-2{
+    margin-bottom: 20px;
+}
+.mb-3{
+    margin-bottom: 30px;
+}
+.mb-4{
+    margin-bottom: 40px;
+}
+.mb-5{
+    margin-bottom: 50px;
+}
+/* PADDING top bot */
+.p-5{
+    padding: 5px;
+}
+.p-7{
+    padding: 7px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-15{
+    padding: 15px;
+}
+/* pad top bot */
+.px-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.px-7{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.px-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* pad top bot */
+.py-5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.py-7{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.py-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-15{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

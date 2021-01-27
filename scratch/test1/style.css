@@ -1,58 +1,28 @@
-*{
-    padding: 0;
-    margin: 0;
-}
 body{
-    font-family: Arial, sans-serif;
     text-align: center;
-}
-.posR{
-    position: relative;
-}
-h1{
-    font-family: 'Comic Sans MS';
-    letter-spacing: 10px;
-    margin-bottom: 80px;
 }
 .underline{
     font-size: 1.2em;
-    text-decoration: underline #5f504e;
+    text-decoration: underline;
 }
-h1 span{
+.scratch-title span{
     font-size: 40px;
-    color: #f0c815;
-}
-.task-video{
-    margin: 20px auto;
-    border: 14px solid #f3f1eb;
 }
 .tast-block{
-    background: #dad6cb;
     padding: 30px;
-    margin: 20px auto  40px;
     width: 600px;
-}
-.steps{
-    font-size: 50px;
-    color: crimson;
-    font-weight: bold;
-    margin: 70px 0 20px;
 }
 .ready-title{
     text-align: right;
     width: 480px;
-    margin: 0 auto;
 }
-.tast-title{
-    margin-bottom: 30px;
-    background: #bbb7ac;
-    padding: 7px;
+.task-title{
+    background-color: #a0c5f5;
     line-height: 31px;
 }
 ul{
     text-align: left;
     width: 500px;
-    margin: 0 auto;
 }
 .task-item{
     margin: 10px 0;
@@ -62,22 +32,7 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-.test-play-title{
-    margin: 10px 0;
-}
 .custom-width{
     width: 400px;
     font-size: 16px;
-}
-.footer{
-    margin: 50px 0 0;
-    background-color: #51523a;
-    padding: 75px 0;
-    text-align: center;
-    color: #cfbf8a;
-    font-size: 30px;
-}
-.footer a{
-    display: block;
-    margin-bottom: 20px;
 }

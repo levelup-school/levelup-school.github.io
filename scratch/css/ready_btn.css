@@ -16,7 +16,7 @@
     animation: unready 1s ease-in-out;
 }
 .ready-btn{
-    background: #1580c7;
+    background-color: #1580c7;
 }
 .ready-btn:hover{
     background: #57b4f3;
