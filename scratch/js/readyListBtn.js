@@ -3,6 +3,7 @@
 (function(){
     const listItems = document.querySelectorAll('[type="checkbox"]'),
         readyBtn = document.getElementById('ready-btn'),
+        link = readyBtn.getAttribute('data-link'),
         modal = document.querySelector('.modal'),
         okBtn = document.querySelector('.ok-btn');
 
@@ -36,17 +37,19 @@
     });
 
     function showModal (){
-        modal.style.display = 'block';
-        okBtn.addEventListener('click', hideModal, {once: true});
-        document.body.style.overflow = 'hidden';
-        // add fireworks JQuery script to start animation
-        document.body.appendChild(fireworksScript);
+        if (link){
+            window.location.replace(link);
+        } else{
+            modal.style.display = 'block';
+            okBtn.addEventListener('click', hideModal, {once: true});
+            document.body.style.overflow = 'hidden';
+            // add fireworks JQuery script to start animation
+            document.body.appendChild(fireworksScript);
+        }
     }
 
     function hideModal (){
         modal.style.display = 'none';
         document.body.style.overflow = '';
-        console.log ('asd');
     }
 }());
-

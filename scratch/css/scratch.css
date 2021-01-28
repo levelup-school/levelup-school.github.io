@@ -6,18 +6,31 @@ body{
     font-family: Arial, sans-serif;
     --blue:  #4c97ff;
     --orange: #f9a83a;
+    --yellow: #ffd500;
     --purple: #9966ff;
     --redorange: #ff8c1a;
     --green: #4cbf56;
     --lblue: #eaf3ff;
+    --lblue2: #a0c5f5;
+    --gray: #8d9397;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     width: 100%;
 }
 .posR{
     position: relative;
+}
+/* display flex */
+.d-f{
+    display: flex;
+}
+.j-sb{
+    justify-content: space-between;
+}
+.ai-c{
+    align-items: center;
 }
 /* headers */
 .scratch-title{
@@ -28,17 +41,36 @@ body{
     font-size: 50px;
     font-weight: bold;
 }
+/* hover */
+.tr-2{
+    transition: all .2s ease;
+}
+.h-g:hover{
+    background-color: var(--green);
+}
+.h-b:hover{
+    filter: brightness(115%);
+}
 /* span plate, bg, colors */
 .s-plate{
     color: white;
     padding: 7px;
     border-radius: 7px;
 }
+.yellow{
+    color: var(--yellow);
+}
 .orange{
     color: var(--orange);
 }
 .blue{
     color: var(--blue);
+}
+.lblue{
+    color: var(--lblue);
+}
+.lblue2{
+    color: var(--lblue2);
 }
 .purple{
     color: var(--purple);
@@ -49,14 +81,23 @@ body{
 .green{
     color: var(--green);
 }
+.gray{
+    color: var(--gray);
+}
 .motion {
     background-color: var(--blue);
 }
 .looks{
     background-color: var(--purple);
 }
+.events{
+    background-color: var(--yellow);
+}
 .control {
     background-color: #ffab19;
+}
+.sensor{
+    background-color: #5cb1d6;
 }
 .variable{
     background-color: var(--redorange);
@@ -67,11 +108,90 @@ body{
 .lblue-bg{
     background-color: var(--lblue);
 }
+.lblue-bg2{
+    background-color: var(--lblue2);
+}
+.gray-bg{
+    background-color: var(--gray);
+}
 .b-bor{
-    margin: 20px auto;
     border: 14px solid var(--lblue);
 }
-
+/* text */
+.ta-c{
+    text-align: center;
+}
+.ta-l{
+    text-align: left;
+}
+.ta-r{
+    text-align: right;
+}
+.td-u{
+    text-decoration: underline;
+}
+.td-n{
+    text-decoration: none;
+}
+.t-b{
+    font-weight: bold;
+}
+/* font size */
+.f-16{
+    font-size: 16px;
+}
+.f-18{
+    font-size: 18px;
+}
+.f-06r{
+    font-size: 0.6rem;
+}
+.f-06e{
+    font-size: 0.6em;
+}
+.f-08r{
+    font-size: 0.8rem;
+}
+.f-08e{
+    font-size: 0.8em;
+}
+.f-12r{
+    font-size: 1.2rem;
+}
+.f-12e{
+    font-size: 1.2em;
+}
+.f-15r{
+    font-size: 1.5rem;
+}
+.f-15e{
+    font-size: 1.5em;
+}
+.f-2r{
+    font-size: 2rem;
+}
+.f-2e{
+    font-size: 2em;
+}
+.f-3r{
+    font-size: 3rem;
+}
+.f-4r{
+    font-size: 4rem;
+}
+.f-5r{
+    font-size: 5rem;
+}
+/* line height */
+.lh-1r{
+    line-height: 1rem;
+}
+.lh-15{
+    line-height: 1.5em;
+}
+.lh-2{
+    line-height: 2em;
+}
 /* footer */
 .footer{
     margin: 50px 0 0;
@@ -86,6 +206,11 @@ body{
 }
 
 /* margin padding */
+/* mar left right */
+.mx-a{
+    margin-left: auto;
+    margin-right: auto;
+}
 /* mar top bot */
 .my-1{
     margin-top: 10px;
@@ -106,11 +231,6 @@ body{
 .my-5{
     margin-top: 50px;
     margin-bottom: 50px;
-}
-/* mar left right */
-.mx-a{
-    margin-left: auto;
-    margin-right: auto;
 }
 /* mar top */
 .mt-1{
@@ -157,6 +277,12 @@ body{
 .p-15{
     padding: 15px;
 }
+.p-20{
+    padding: 20px;
+}
+.p-30{
+    padding: 30px;
+}
 /* pad top bot */
 .px-5{
     padding-left: 5px;
@@ -174,6 +300,14 @@ body{
     padding-left: 15px;
     padding-right: 15px;
 }
+.px-20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.px-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
 /* pad top bot */
 .py-5{
     padding-top: 5px;
@@ -190,4 +324,46 @@ body{
 .py-15{
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.py-20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.py-30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/* width height */
+.w-50{
+    width: 50px;
+}
+.w-70{
+    width: 70px;
+}
+.w-100{
+    width: 100px;
+}
+.w-150{
+    width: 150px;
+}
+.w-200{
+    width: 200px;
+}
+.w-300{
+    width: 300px;
+}
+.w-400{
+    width: 400px;
+}
+.w-500{
+    width: 500px;
+}
+.w-600{
+    width: 600px;
+}
+.w-700{
+    width: 700px;
+}
+.w-800{
+    width: 800px;
 }
