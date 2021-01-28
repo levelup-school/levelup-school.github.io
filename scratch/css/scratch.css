@@ -13,6 +13,7 @@ body{
     --lblue: #eaf3ff;
     --lblue2: #a0c5f5;
     --gray: #8d9397;
+    --lgray: #d8dee2;
 }
 .container{
     max-width: 1000px;
@@ -84,6 +85,9 @@ body{
 .gray{
     color: var(--gray);
 }
+.lgray{
+    color: var(--lgray);
+}
 .motion {
     background-color: var(--blue);
 }
@@ -138,6 +142,9 @@ body{
 }
 .t-b{
     font-weight: bold;
+}
+.tt-u{
+    text-transform: uppercase;
 }
 /* font size */
 .f-16{
@@ -194,6 +201,13 @@ body{
 }
 .lh-2{
     line-height: 2em;
+}
+/* letter spacing */
+.ls-5{
+    letter-spacing: 5px;
+}
+.ls-7{
+    letter-spacing: 7px;
 }
 /* footer */
 .footer{
