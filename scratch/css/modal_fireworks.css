@@ -49,3 +49,8 @@ canvas{
     width: 100%;
     max-width: 1200px;
 }
+@media screen and (max-height:670px){
+    canvas{
+        max-width: 900px;
+    }
+}

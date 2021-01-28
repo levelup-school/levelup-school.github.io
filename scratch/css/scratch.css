@@ -102,6 +102,9 @@ body{
 .variable{
     background-color: var(--redorange);
 }
+.operators{
+    background-color: #59c059;
+}
 .green-flag{
     background-color: var(--green);
 }
