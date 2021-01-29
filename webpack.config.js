@@ -11,21 +11,21 @@ module.exports = {
   },
   watch: true,
 
-  devtool: "source-map",
+  devtool: false,
 
   module: {}
 };
 
-module.exports = {
-  mode: 'production',
-  entry: './map/web/src/index.js',
-  output: {
-    filename: './map/web/jabba.js',
-    path: __dirname
-  },
-  watch: true,
+// module.exports = {
+//   mode: 'production',
+//   entry: './map/web/src/index.js',
+//   output: {
+//     filename: './map/web/jabba.js',
+//     path: __dirname
+//   },
+//   watch: true,
 
-  devtool: "source-map",
+//   devtool: false,
 
-  module: {}
-};
+//   module: {}
+// };
