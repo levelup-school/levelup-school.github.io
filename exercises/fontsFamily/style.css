@@ -1,0 +1,35 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-size: 80px;
+    color: rgb(44, 56, 92);
+}
+h2{
+    font-size: 100px;
+    color: #ac3e3e;
+}
+h3{
+    font-family: 'Andika', sans-serif;
+}
+.lesson-font{
+    display: flex;
+    justify-content: center;
+}
+
+.block1{
+    
+    margin: 20px;
+    width: 300px;
+}
+.border-decor{
+    height: 200px;
+    padding: 20px 0;
+    border-right: 2px solid #ac3e3e;
+}
+.last-block{
+    border: none;
+}
