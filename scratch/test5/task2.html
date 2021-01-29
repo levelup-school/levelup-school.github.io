@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../img/exam.png">
-    <title>Scratch Задачи - 1 этап</title>
-    <meta property="og:image" content="../../img/exam.png">
-    <meta property="og:title" content="Задачи по Scratch">
-    <meta property="og:site_name" content="Upschool Scratch-task">
+    <title>Scratch Задача - 2 этап</title>
     <link rel="stylesheet" href="../css/tuuli_checkbox.css">
     <link rel="stylesheet" href="../css/ready_btn.css">
     <link rel="stylesheet" href="../css/scratch.css">
@@ -15,32 +12,25 @@
 </head>
 <body class="ta-c f-18">
     <h1 class="scratch-title mt-2 mb-5">Задачи по <span class="orange f-15e">Scratch</span></h1>
-    <h2 class="mb-1 tt-u ls-5 blue">Квадрат - перемещение</h2>
-    <p class="f-12e mb-5 lgray">Эта задача состоит из 3 этапов.</p>
-    <p class="f-5r lblue">Этап <span class="t-b">1</span></p>
+    <p class="f-5r lblue">Этап <span class="t-b">2</span></p>
     <p class="step blue mt-5">1</p>
     <p class="my-2">
-        Необходимо достичь следующего результата -
-        <b>Когда флажок нажат квадрат перемещается <br> из верхней левой части экрана в нижнюю за 1 секунду</b>.
+        Задача - <b>Наши клоны постоянно двигаются в случайные места и каждые 2 секунды<br> их направление меняется.</b>
     </p>
     <p>
         Чтобы лучше понять задачу, потестируй это самостоятельно нажав на 
         <span class="s-plate green-flag">флажок</span>.
     </p>
-
-    <iframe class="b-bor my-2" src="https://scratch.mit.edu/projects/480393917/embed" allowtransparency="true" width="628" height="462" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
+    <iframe class="b-bor my-2" src="https://scratch.mit.edu/projects/480392534/embed" allowtransparency="true" width="628" height="462" frameborder="0" scrolling="no" allowfullscreen></iframe>
     <p class="step blue mt-3">2</p>
-    <p class="my-1">Значение необходимых координат (x, y) подбери примерные, но должно быть очевидно, что квадрат движется сверху вниз.</p>
-    <p class="my-1">Если затрудняешься с подбором координат, перейди по ссылке ниже и поэкспериментируй перетягивая кота в разные точки.</p>
-    <p class="my-3"><a class="td-n s-plate lblue-bg2 tr-2 h-b" href="https://levelup-school.github.io/scratch/coordinate/" target="_blank">Координаты</a></p>
+    <p class="my-2">Продолжаем работу с результатом из предыдущего этапа.</p>
     <div class="w-600 p-30 lblue-bg mt-2 mx-a mb-4">
         <p class="lblue-bg2 lh-15 p-7 mb-3">Теперь выполни задание, с которым ты познакомился выше:</p>
         <p class="ta-r w-500 mx-a">готово:</p>
         <ul class="ta-l mx-a w-500">
             <li class="lh-2  my-1">
                 <div class="d-f j-sb">
-                    <p class="lh-1r">Добавь или нарисуй любой спрайт;<br><i class="f-08e">(у нас это квадрат)</i></p>
+                    <p class="lh-15"><span class="s-plate control">Клоны</span> <span class="s-plate motion">двигаются</span> в случайное место;</p>
                     <div class="toggle-button toggle-button--tuuli">
                         <input id="toggleButton1" type="checkbox">
                         <label for="toggleButton1"></label>
@@ -50,7 +40,7 @@
             </li>
             <li class="lh-2  my-1">
                 <div class="d-f j-sb">
-                    <p class="lh-15">В <span class="s-plate events">начале</span> квадрат <span class="s-plate motion">находится</span> в верхней левой части поля;</p>
+                    <p class="lh-15">Клоны меняют свое направление каждые 2 секунды;</p>
                     <div class="toggle-button toggle-button--tuuli">
                         <input id="toggleButton2" type="checkbox">
                         <label for="toggleButton2"></label>
@@ -60,7 +50,7 @@
             </li>
             <li class="lh-2  my-1">
                 <div class="d-f j-sb">
-                    <p class="lh-15">Потом <span class="s-plate motion">двигается</span> в нижнюю левую часть поля в течении 1 секунды.</p>
+                    <p class="lh-15">Все выше перечисленное проиходит <span class="s-plate control">постоянно</span>.</p>
                     <div class="toggle-button toggle-button--tuuli">
                         <input id="toggleButton3" type="checkbox">
                         <label for="toggleButton3"></label>
@@ -70,12 +60,17 @@
             </li>
         </ul>
     </div>
-    <button id="ready-btn" data-link="./task2.html" class="btn unready-btn tooltip">
-        <!-- set tooltip width and font-size locally -->
-        Этап 2<span class="tooltiptext w-400 f-16">Сделай все задания и поставь все
-        галочки напротив каждого задания.</span>
-    </button>
-    
+    <div class="d-f j-sb w-600 mx-a ai-c">
+        <a class="s-plate gray-bg td-n tr-2 h-g tooltip" href="index.html">
+            Назад<span class="tooltiptext w-150 f-16">Что-то забыл?</span>
+        </a>
+        <button id="ready-btn" data-link="./task3.html" class="btn unready-btn tooltip">
+            <!-- set tooltip width and font-size locally -->
+            Этап 3<span class="tooltiptext w-400 f-16">Сделай все задания и поставь все
+            галочки напротив каждого задания.</span>
+        </button>
+    </div>
+
     <footer class="footer">
         <a class="middle" href="https://up-school.online/" title="На страницу школы Up-School" target="_blank">
             <img src="../../img/upschool2.png" height="70" alt="">
