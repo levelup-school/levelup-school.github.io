@@ -2,19 +2,19 @@
 
 let path = require('path');
 
-module.exports = {
-  mode: 'production',
-  entry: './map/scratch/src/index.js',
-  output: {
-    filename: './map/scratch/jabba.js',
-    path: __dirname
-  },
-  watch: true,
+// module.exports = {
+//   mode: 'production',
+//   entry: './map/scratch/src/index.js',
+//   output: {
+//     filename: './map/scratch/jabba.js',
+//     path: __dirname
+//   },
+//   watch: true,
 
-  devtool: false,
+//   devtool: false,
 
-  module: {}
-};
+//   module: {}
+// };
 
 // module.exports = {
 //   mode: 'production',
