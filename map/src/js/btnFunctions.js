@@ -7,10 +7,11 @@ export default function btnFunctions(map){
     copyBtnList.forEach(item => {
         item.addEventListener('click', () =>{
             let dataId = item.getAttribute('data-id');
-            
-            map[dataId].url.select();
-            document.execCommand("copy");
-            console.log('asd');
+            navigator.clipboard.writeText(map[dataId].url).then(function() {
+                console.log('Async: Copying to clipboard was successful!');
+              }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+              });
         });
     });
     

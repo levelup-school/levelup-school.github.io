@@ -87,7 +87,7 @@ body{
 .aboutme {
     position: relative;
     height: 100%;
-    background: white;
+    background: linear-gradient(to bottom, white, #fdfdf9,#fdfdf9, white);
     overflow: hidden;
     &__light {
         z-index: 1;
