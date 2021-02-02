@@ -22,7 +22,7 @@ export default function hexLight (headSelector, lightSelector){
     }
 
     headBlock.addEventListener('mouseover', () => {
-        light.style.opacity = 1;
+        light.style.opacity = 0.4;
     
         headBlock.addEventListener('mousemove', setXY);
 

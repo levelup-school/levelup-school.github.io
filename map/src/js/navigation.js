@@ -55,13 +55,13 @@ export default function navigation(toTopSelector, duration) {
     //nav underline slide on mouseover
     let navField = document.querySelector('.nav');
     let navActive = document.querySelector('.nav-active');
-    let xActive = navActive.offsetLeft + navActive.offsetWidth / 2;
+    let xActive = navActive.offsetLeft + navActive.offsetWidth/2;
 
     navField.style.setProperty('--underlinePos', xActive + 'px');
-    navField.onmousemove = function (e) {
+    navField.addEventListener('mousemove', (e)=>{
         let x = e.offsetX;
-        this.style.setProperty('--underlinePos', x + 'px');
-    };
+        navField.style.setProperty('--underlinePos', x + 'px');
+    });
     navField.onmouseout = function () {
         this.style.setProperty('--underlinePos', xActive + 'px');
     };
