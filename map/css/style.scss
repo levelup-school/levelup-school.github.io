@@ -41,7 +41,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, button {
     font-family: 'Jura', sans-serif;
 }
 
@@ -148,11 +148,24 @@ h6 {
         background: url(../../img/hexagon_tile.png);
         background-size: 70px 70px;
     }
-    &__openMore{
-        z-index: 3;
+    .openMore{
+        z-index: 100;
         position: absolute;
         right: 50px;
-        top: 50px;
+        top: 15px;
+        cursor: pointer;
+        padding: 5px 10px;
+        background: none;
+        border: 2px solid $orange;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background .2s ease;
+        opacity: .8;
+        letter-spacing: 2px;
+        &:hover{
+            background-color: $orange;
+        }
     }
 }
 

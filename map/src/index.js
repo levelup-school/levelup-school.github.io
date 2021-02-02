@@ -12,5 +12,12 @@ window.addEventListener('DOMContentLoaded', () => {
     createMap(scratch, '.levels');
     navigation('#toTop', 600);
 
+    openWindowBtn.addEventListener('click', ()=>{
+        moreWindow.style.right = '0px';
+    });
+    closeMoreBtn.addEventListener('click', ()=>{
+        moreWindow.style.right = '-600px';
+    });
+    
 });
 
