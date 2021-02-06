@@ -15,6 +15,8 @@ $darkgray: #585451;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.sel-n{
     /* Firefox */
     -moz-user-select: none;
     /* Internet Explorer */
@@ -26,7 +28,6 @@ $darkgray: #585451;
     /* Отключить вызовы в Android и iOS */
     -webkit-touch-callout: none;
 }
-
 a {
     text-decoration: none;
 }
@@ -442,7 +443,7 @@ h6, button, select {
 
         &:hover {
             transform: scale(1.5);
-            filter: brightness(130%);
+            filter: brightness(90%);
         }
     }
 
