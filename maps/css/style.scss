@@ -106,6 +106,7 @@ h6, button, select {
     #mapSelected{
         padding: 7px;
         border: 1px solid $orange;
+        outline: none;
         border-radius: 5px;
         font-size: 20px;
         font-weight: bold;
@@ -205,10 +206,16 @@ h6, button, select {
     &__header {
         @include textFormat(40px, 600, $gray);
         letter-spacing: 6px;
+        padding: 7px 0;
         text-align: center;
+        cursor: pointer;
         margin: 60px 0 30px;
+        transition: all .3s ease;
+        &:hover{
+            background: rgb(233, 240, 245);
+            color: black;
+        }
     }
-
     &__items {
         display: flex;
         justify-content: center;
@@ -265,7 +272,6 @@ h6, button, select {
         top: -43px;
     }
 }
-
 // more fixed side bar
 .more {
     z-index: 100;
@@ -494,7 +500,9 @@ h6, button, select {
     background: rgb(128, 197, 101);
 
 }
-
+.d-n{
+    display: none;
+}
 /* Animations
 ================== */
 @keyframes toTopBtn {
