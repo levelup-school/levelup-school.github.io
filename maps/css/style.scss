@@ -57,9 +57,51 @@ h6, button, select {
     max-width: 1600px;
     margin: 0 auto;
 }
-
+// Login FORM
+.login-err{
+    display: none;
+    margin: 0 auto 20px;
+    background: rgb(221, 116, 116);
+    font-size: 1.5rem;
+    width: 25rem;
+    text-align: center;
+    padding: 7px;
+    span{
+        font-size: .7em;
+    }
+    &-show{
+        display: block;
+    }
+    &-anim{
+        animation: animErr 1s ease-in-out;
+    }
+}
+@keyframes animErr{
+    25%{transform: translateX(-5%);}
+    75%{transform: translateX(5%);}
+}
+#login-form{
+    font-size: 25px;
+    font-family: 'Jura', sans-serif;
+    color: black;
+    text-align: center;
+    input{
+        padding: 7px;
+        margin: 15px;
+        font-family: 'Jura', sans-serif;
+        font-size: 24px;
+        &:focus{
+            background: $emerald;
+        }
+    }
+    [type=submit] {
+        padding: 7px 15px;
+        cursor: pointer;
+    }
+}
 /*Header*/
 .header {
+    visibility: hidden;
     z-index: 3;
     &__inner {
         z-index: 4;
@@ -77,8 +119,8 @@ h6, button, select {
 
     .nav-link {
         z-index: 1000;
+        cursor: pointer;
         @include textFormat(1rem, 600, $black);
-        width: 100px;
         margin-bottom: 10px;
         margin-right: 30px;
         font-size: .9rem;
@@ -91,7 +133,7 @@ h6, button, select {
         top: 35px;
         left: var(--underlinePos);
         transform: translateX(-50%);
-        width: 60px;
+        width: 80px;
         height: 1px;
         background-color: #e77021;
         transition: all .2s ease;
@@ -101,7 +143,7 @@ h6, button, select {
         color: black;
     }
 
-    .filter{
+    .filters{
         margin-top: 40px;
     }
     #mapSelected{
@@ -165,11 +207,22 @@ h6, button, select {
         background: url(../../img/hexagon_tile.png);
         background-size: 70px 70px;
     }
-    .openMore{
+    .right-head{
         z-index: 100;
         position: absolute;
         right: 50px;
         top: 15px;
+    }
+    .openMore{
+        position: fixed;
+    }
+    .user-name{
+        color: rgb(206, 201, 196);
+        margin-right: 10px;
+        font-family: 'Jura', sans-serif;
+        letter-spacing: 1px;
+    }
+    .right-btn{
         cursor: pointer;
         padding: 5px 10px;
         background: none;
@@ -183,6 +236,9 @@ h6, button, select {
         &:hover{
             background-color: $orange;
         }
+    }
+    .exitBtn{
+        margin-right: 20px;
     }
 }
 
@@ -273,6 +329,7 @@ h6, button, select {
         top: -43px;
     }
 }
+
 // more fixed side bar
 .more {
     z-index: 100;
@@ -300,19 +357,6 @@ h6, button, select {
     &::-webkit-scrollbar-thumb:hover {
         background: #bfc0c7;
     }
-    //hide scroolbar chrome, opera and...
-    // &::-webkit-scrollbar {
-    //     display: none;
-    // }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    // & {
-    //     /* IE and Edge */
-    //     -ms-overflow-style: none;
-    //     /* Firefox */
-    //     scrollbar-width: none;
-    // }
-
     &__inner {
         padding: 50px 20px;
         direction: ltr;

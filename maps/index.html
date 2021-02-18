@@ -15,30 +15,36 @@
     <main class="aboutme">
         <div class="aboutme__light"></div>
         <div class="aboutme__grid"></div>
-        <button class="openMore">More..</button>
-    
+        
+
         <header id="header" class="header sel-n">
             <div class="header__inner container">
                 <nav class="nav">
-                    <a class="nav-link nav-active" href="#">Карта</a>
-                    <a class="nav-link" href="#">What here?</a>
-                    <a class="nav-link" href="#">What here?</a>
-                    <a class="nav-link" href="#">What here?</a>
+                    <a class="nav-link nav-active" data-page="maps">Карта</a>
+                    <a class="nav-link" data-page="payment">Оплата</a>
                 </nav>
-                <div class="filter">
-                    <select id="mapSelected" name="maps">
-                        <option value="scratch">Scratch</option>
-                        <option value="htmlcss">HTML & CSS</option>
-                        <option value="minecraft">Minecraft</option>
-                        <option value="python">Python</option>
-                      </select>
+                <div class="right-head">
+                    <span class="user-name"></span>
+                    <button class="exitBtn right-btn">Exit</button>
+                    <button class="openMore right-btn">More..</button>
                 </div>
+                <div class="filters"></div>
                 <a id="toTop" href="#header" title="Top" class="menu__item far fa-caret-square-up fa-3x"></a>
             </div>
         </header>
 
         <section class="map sel-n">
-            <div class="levels"></div>
+            <div class="levels">
+                <p class="login-err">Неверный логин или пароль.<br><span>Попробуйте еще раз.</span></p>
+                <form id="login-form">
+                    <label for="login">Login:</label><br>
+                    <input type="text" id="login" name="login" required><br><br>
+                    <label for="pass">Password:</label><br>
+                    <input type="password" id="pass" name="pass" required><br>
+                    <input type="submit" name="submit" value="Ok">
+                </form>
+                
+            </div>
         </section>
 
         <section class="more">

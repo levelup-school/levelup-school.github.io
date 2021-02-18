@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+    background-color: rgb(146, 116, 173);
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-family: Arial, sans-serif;
+    background-color: #e0d640;
+    border-radius: 15px;
+    width: 350px;
+    letter-spacing: 7px;
+    margin: 20px auto;
+}
+.yellow{
+    color: #e0d640;
+}
+.purple{
+    color: rgb(116, 5, 116);
+}
+.green{
+    color: rgb(3, 82, 3);
+}
+.red{
+    color: rgb(172, 23, 23);
+}
+.blue{
+    color: rgb(28, 77, 212);
+}
+.orange{
+    color: rgb(240, 159, 10);
+}
+h2.two-colors{
+    text-decoration: underline;
+}
+p.two-colors{
+    font-size: 20px;
+}
+.start-p{
+    border-top: 2px dashed black;
+    font-size: 30px;
+    margin-top: 110px;
+}
+.recomend{
+    width: 300px;
+    margin: 100px auto 0;
+    border: 2px solid black;
+    background-color: #797979;
+}
+.colorwheel{
+    margin-top: 60px;
+    font-size: 30px;
+}
