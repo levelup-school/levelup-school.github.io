@@ -18,6 +18,7 @@ h3{
 .lesson-font{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .block1{

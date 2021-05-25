@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+mark{
+    background: none;
+    color: #dd6c2b;
+    font-weight: bold;
+}
+h1,h2,h3,h4,h5,h6,mark{
+    font-family: Arial Black, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+.head-container{
+    background: #000000 url(./img/greeting_blender.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    padding: 50px 0;
+}
+.head-block{
+    width: 300px;
+    padding: 25px 20px 30px;
+    background: linear-gradient(45deg, #d46464, #cea35d);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: Arial Black, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+}
+/* blender info */
+.info{
+    padding: 30px 0;
+}
+.info__descr{
+    text-indent: 40px;
+    line-height: 1.8em;
+}
+/* links */
+.links{
+    margin: 50px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.link-item{
+    width: 300px;
+    border: 2px solid #d36f11;
+    padding: 30px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px black;
+}
+.item-txt{
+    margin-top: 30px;
+}
+/* feature */
+.feature{
+    background:linear-gradient(45deg, #f3ddb5, #cacafb);
+    padding: 40px 0;
+}
+.feature h2{
+    text-shadow: 2px 2px 5px rgb(200, 139, 24);
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+.feature__item{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0 100px;
+}
+.feature__descr{
+    width: 45%;
+}
+.feature__descr h3{
+    margin: 35px 0 15px;
+}
+.feature__descr p{
+    line-height: 1.5em;
+}

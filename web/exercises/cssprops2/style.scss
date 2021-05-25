@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    --redorange:#f35532;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgb(40, 59, 82);
+    padding: 10px;
+}
+.nav a{
+    color: var(--redorange);
+    text-decoration: none;
+    margin: 0 20px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+h1{
+    margin: 70px 0 30px;
+    text-align: center;
+    color: #c1d6da;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.blue{
+    color: #316c94;
+}
+.blue2{
+    color: #c7e5f8;
+}
+.green{
+    color: #1e751e;
+}
+.green2{
+    color: #91d691;
+}
+.green3{
+    color: #bee7be;
+}
+.prop{
+    margin: 30px 0;
+    &__inner{
+        padding: 50px;
+        background-color: #dfebf1;
+        position: relative;
+    }
+    &__title{
+        text-align: center;
+        color: var(--redorange);
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 50px;    
+    }
+    &__num{
+        position: absolute;
+        font-weight: bold;
+        background-color: #ebe4c2;
+        color: var(--redorange);
+        padding: 3px 10px;
+        border: 2px solid black;
+        border-radius: 7px;
+        font-size: 35px;
+        top: -15px;
+        left: 10px;    
+    }
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box-shadow{
+    &__item{
+        text-align: center;
+        font-weight: bold;
+        padding: 30px 15px;
+        margin: 30px 0;
+        width: 25%;
+        background-color: rgb(240, 136, 17);
+    }
+    &__item1{
+        box-shadow: 5px 5px 15px #170a64;
+    }
+    &__item3{
+        box-shadow: 5px 5px 0px #170a64;
+    }
+    &__item4{
+        box-shadow: 5px 5px 50px green;
+    }
+    &__item5{
+        box-shadow: 0px 0px 25px #d61676;
+    }
+    &__item6{
+        box-shadow: -5px -5px 0px #170a64;
+    }
+}
+.text-shadow{
+    &__item{
+        text-align: center;
+        font-weight: bold;
+        margin: 30px 0;
+    }
+    &__shadow{
+        font-size: 3rem;
+    }
+    &__shadow1{
+        text-shadow: 5px 5px 10px red;
+    }
+    &__shadow2{
+        text-shadow: 5px 5px 0px #b1b1b1;
+    }
+    &__shadow3{
+        text-shadow: -5px -5px 10px red;
+    }
+    &__shadow4{
+        text-shadow: 0px 0px 30px #d816a7;
+    }
+    &__shadow5{
+        text-shadow: -5px -5px 0px #b1b1b1;
+    }
+}
+.word-spacing{
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px 0;
+    &__prop{
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    &__item{
+        background-color: rgb(224, 211, 185);
+        padding: 15px;
+    }
+    &__item1{
+        word-spacing: 20px;
+    }
+    &__item2{
+        word-spacing: 50px;
+    }
+}
+.text-indent{
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px 0;
+    &__prop{
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    &__item{
+        background-color: rgb(224, 211, 185);
+        padding: 15px;
+    }
+    &__item1{
+        text-indent: 50px;
+    }
+    &__item2{
+        text-indent: 100px;
+    }
+}
+.background{
+    color: white;
+    &__item{
+        height: 300px;
+        width: 500px;
+        border: 4px solid var(--redorange);
+        margin: 20px;
+        padding: 15px;
+    }
+    &__bg1{
+        background: #fff url(./map.jpg) no-repeat center;
+        background-size: cover;
+    }
+    &__bg2{
+        background: #fff url(./map.jpg) left top;
+        background-size: 250px;
+    }
+    &__bg3{
+        background: purple url(./map.jpg) no-repeat right;
+        background-size: 300px;
+    }
+    &__bg4{
+        background: gray url(./map.jpg) no-repeat right top;
+        background-size: 300px;
+    }
+    &__bg5{
+        width: 100%;
+        background: gray url(./map.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+    &__bg6{
+        height: 300px;
+        width: 500px;
+        background: gray url(./map.jpg) no-repeat fixed;
+        background-size: cover;
+    }
+}
+.linear-gradient{
+    margin: 20px 0;
+    &__item{
+        margin: 20px 0;
+        padding: 7px;
+        width: 500px;
+        height: 100px;
+        border: 2px solid black;
+    }
+    &__item1{
+        background: linear-gradient(white, #14dac9);
+    }
+    &__item2{
+        background: linear-gradient(#cecb23, #194ad3, #e02b2b);
+    }
+    &__item3{
+        background: linear-gradient(90deg, #ce9223, #194ad3);
+    }
+    &__item4{
+        background: linear-gradient(-90deg, #ce9223, #194ad3);
+    }
+    &__item5{
+        background: linear-gradient(45deg, #9dd814, #cd19d3);
+    }
+    &__item6{
+        background: linear-gradient(-45deg, #9dd814, #cd19d3);
+    }
+}
+.radial-gradient{
+    margin: 20px 0;
+    &__item{
+        margin: 20px 0;
+        padding: 7px;
+        width: 500px;
+        height: 500px;
+        border: 2px solid black;
+    }
+    &__item1{
+        background: radial-gradient(white, #14dac9);
+    }
+    &__item2{
+        background: radial-gradient(#cfce69, #4566c0, #eea2a2);
+    }
+}
+#opacity .prop__inner{
+    color: white;
+    background: url(./map.jpg) no-repeat center;
+    background-size: cover;
+}
+.opacity{
+    margin: 20px 0;
+    &__item{
+        margin: 20px 0;
+        height: 100px;
+        width: 500px;
+        padding: 15px;
+        font-size: 40px;
+        background: rgb(236, 114, 165);
+    }
+    &__item1{
+        opacity: 1;
+    }
+    &__item2{
+        opacity: 0.5;
+    }
+    &__item3{
+        opacity: 0.3;
+    }
+    &__item4{
+        opacity: 0.1;
+    }
+    &__item5{
+        opacity: 0.9;
+    }
+    &__item6{
+        opacity: 0.7;
+    }
+    &__item7{
+        opacity: 0.8;
+    }
+    &__item8{
+        opacity: 0.6;
+    }
+    &__item9{
+        opacity: 0.4;
+    }
+    &__item10{
+        opacity: 0.2;
+    }
+}

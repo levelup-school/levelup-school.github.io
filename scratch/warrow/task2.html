@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="f-14" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/exam.png">
+    <title>Стрелка - 2 этап</title>
+    <link rel="stylesheet" href="../css/tuuli_checkbox.css">
+    <link rel="stylesheet" href="../css/ready_btn.css">
+    <link rel="stylesheet" href="../css/scratch.css">
+    <link rel="stylesheet" href="arrow.css">
+    <link rel="stylesheet" href="../css/hover_top_tooltip.css">
+</head>
+<body class="ta-c f-18">
+    <div class="d-f j-sb container py-10">
+        <div><a href="https://up-school.online/" target="_blank"><img src="../../img/upschool.png" height="50" alt=""></a></div>
+        <!-- lang div here -->
+    </div>
+    <h1 class="my-1 py-7 tt-u ls-5 blue">Стрелка туда-сюда</h1>
+
+    <p class="f-12e my-3 lgray">Этапы:</p>
+    <p class="f-12e mb-5 lgray">
+        <a class="td-n lblue-bg py-5 px-7 lblue2" href="index.html">1</a>
+        <a class="td-n lblue-bg2 py-5 px-7 lblue t-b" href="task2.html">2</a>
+        <a class="td-n lblue-bg py-5 px-7 lblue2" href="task3.html">3</a>
+    </p>
+
+    <p class="f-5r lblue">Этап <span class="t-b">2</span></p>
+    <div class="container f-2r lblue-bg p-30 my-3">
+        <p class="step blue">1</p>
+        <p class="my-5 f-12e f-imp s-plate motion">Поработаем с циклами</p>
+        <p>Нам понадобится цикл, чтобы стрелка вращалась.</p>
+        <p class="ta-l mt-3 f-08e">Описание задания:</p>
+        <ul class="ta-l w-800 mx-a f-08e my-3">
+            <li class="my-2">Сначала стрелка повернется на 50 градусов вправо;</li>
+            <li class="my-2">Потом на 50 градусов влево.</li>
+            <li class="my-2">А потом опять на 50 градусов вправо (в исходную позицию).</li>
+            <li class="my-2">Выше перечисленное работает постоянно.</li>
+        </ul>
+        <p class="f-06e">Нажми на <span class="s-plate green-flag">флажок</span>.</p>
+        <div>
+            <iframe class="b-bor2 my-2" src="https://scratch.mit.edu/projects/496885549/embed" allowtransparency="true" width="840" height="680" frameborder="0" scrolling="no" allowfullscreen></iframe>    
+        </div>
+        <div class="w-600 d-f ai-c j-sb mx-a my-3">
+            <span class="f-08e b-l5 p-7">Начинаем?</span> 
+            <button class=" show-next-btn btn-1 f-08e" data-display=".level2" data-scroll>Да</button>
+        </div> 
+    </div>    
+
+    <div class="level2 container f-2r b-bor4 p-20 my-5 d-n posR"> 
+        <p class="step orange mt-3">2</p>
+        <ol class="lorange-bg ta-l my-3 p-30 f-2 posR">
+            <img src="img/repeat10.png" class="posA repeat10" height="120" alt="">
+            <li class="mx-4 my-2">
+                Чтобы была <b>анимация движения</b> нам понадобится цикл повторить 10 раз. То есть
+                мы будем поворачиваться на 5 градусов 10 раз, а не сразу на 50 градусов - это нужно сделать,
+                чтобы была анимация вращения;
+            </li>
+            <div class="mx-4">
+                <p>5 x 10 = 50? <br> С помощью такого скрипта повернем стрелку на 50 градусов вправо:</p>
+                <img src="img/repeatrot.png" height="200" alt="">    
+            </div>
+            <li class="mx-4 my-2">Теперь, похожим спобосом, надо повернуть стрелочку на 50 градусов, но уже в другую сторону - влево.</li>
+            <li class="mx-4 my-2">Ну и стрелка опять должна повернутся на 50 градусов вправо (в исходное положение);</li>
+            <li class="mx-4 my-2">В заключение, нужно сделать, чтобы вращение стрелки влево-вправо работало постоянно.</li>
+        </ol>
+        <p class="step orange mt-3">3</p>
+        <div class="mt-4 w-600 f-1r d-f ai-c j-sb mx-a">
+            <span class="b-l5 p-7">Нужна подсказка?</span>
+            <button class="show-next-btn f-08e btn-1" data-display=".show5">Да</button>
+        </div>
+        <div class="show5 d-n mt-3">
+            <div class="w-600 f-1r d-f ai-c j-sb mx-a">
+                <span class="b-l5 p-7">А ты сам подумал хотябы минут 5?</span>
+                <button class="show-next-btn f-08e btn-1" data-display=".show6">Да</button>
+            </div>
+        </div>
+
+        <div class="show6 w-800 mx-a d-n lorange-bg my-3 p-30">
+            <div class="show6 d-n my-1">
+                <div class="w-600 f-1r d-f ai-c j-sb mx-a">
+                    <span class="b-l5 p-7">Подсказка.</span>
+                    <button class="show-next-btn f-08e btn-1" data-display=".show7">Показать</button>
+                </div>
+            </div>
+            <div class="show7 d-n mt-3 b-bor3">
+                <div class="f-1r p-30">
+                    <p class="mb-2">Весь скрипт:</p>
+                    <img src="img/21hint.png" width="400" alt="">                
+                </div>
+            </div>
+        </div>
+        <div class="w-800 f-12r p-30 lorange-bg my-5 mx-a">
+            <p class="lorange-bg2 lh-15 p-7 mb-3">Теперь выполни задание, с которым ты познакомился выше:</p>
+            <p class="ta-r w-700 mx-a">готово:</p>
+            <ol class="ta-l mx-a w-700">
+                <li class="lh-2  my-2">
+                    <div class="d-f j-sb">
+                        <p class="lh-1r">Стрелка <span class="s-plate motion">поворачивается</span> на 50 градусов вправо;</p>
+                        <div class="toggle-button toggle-button--tuuli">
+                            <input id="toggleButton1" type="checkbox">
+                            <label for="toggleButton1"></label>
+                            <div class="toggle-button__icon"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="lh-2  my-2">
+                    <div class="d-f j-sb">
+                        <p class="lh-1r">Стрелка <span class="s-plate motion">поворачивается</span> на 50 градусов влево;</p>
+                        <div class="toggle-button toggle-button--tuuli">
+                            <input id="toggleButton2" type="checkbox">
+                            <label for="toggleButton2"></label>
+                            <div class="toggle-button__icon"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="lh-2  my-2">
+                    <div class="d-f j-sb">
+                        <p class="lh-15">Стрелка <span class="s-plate motion">поворачивается</span> на 50 градусов вправо;,<br><i class="f-08e">(в исходное положение)</i></p>
+                        <div class="toggle-button toggle-button--tuuli">
+                            <input id="toggleButton3" type="checkbox">
+                            <label for="toggleButton3"></label>
+                            <div class="toggle-button__icon"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="lh-2  my-2">
+                    <div class="d-f j-sb">
+                        <p class="lh-15">Стрелка вращается <span class="s-plate control">постоянно</span>.</p>
+                        <div class="toggle-button toggle-button--tuuli">
+                            <input id="toggleButton4" type="checkbox">
+                            <label for="toggleButton4"></label>
+                            <div class="toggle-button__icon"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="tooltip">
+            <button id="ready-btn" data-link='./task3.html' class="btn unready-btn">Этап 3</button>
+            <span class="tooltiptext w-400 f-16">
+                Сделай все задания и поставь все галочки напротив каждого задания.
+            </span>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <a class="middle" href="https://up-school.online/" title="На страницу школы Up-School" target="_blank">
+            <img src="../../img/upschool2.png" height="70" alt="">
+        </a>
+        <h2 class="orange">Успехов!</h2>
+    </footer>
+
+    <script src="../js/readyListBtn.js"></script>
+</body>
+</html>

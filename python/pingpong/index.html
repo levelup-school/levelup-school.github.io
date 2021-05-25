@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сквош</title>
+    <link rel="stylesheet" href="../python.css">
+    <link rel="icon" href="./img/ball.png">
+</head>
+<body class="none-sel">
+    <header class="main-title">
+        <h1>Сквош</h1>
+        <h5>или Пинг-понг</h5>
+    </header>
+
+    <div class="container">
+        <h3>Игра на PyGame</h3>
+        <p>
+            Сейчас мы с вами рассмотрим создание простейшей игры. Суть
+            игры состоит в том, чтобы удержать битой мяч в пределах экрана. Конечно, по
+            современным меркам назвать это игрой сложно — такого рода игры были в ходу
+            лет 40 назад. Ну а сейчас могут рассматриваться только как тренировочное
+            задание. Внешний вид игры представлен на рисунке ниже.
+        </p>
+        <div class="ta-c">
+            <img src="./img/pingpong.jpg" alt="" height="300">
+            <p>Рис 1. Внешний вид игры</p>
+        </div>
+        <p>
+            Ниже приведен исходный код программы. Все файлы, включая рисунки мяча,
+            биты и значок находятся в 
+            <a class="source-link" href="https://drive.google.com/drive/folders/18mFB8qhM_B3JQZAXN9PQ6NEQrBfg8vfN" target="_blank">архиве</a>.
+        </p>
+        <ol class="code">
+            <li>import pygame</li>
+            <li></li>
+            <li>pygame.init()</li>
+            <li></li>
+            <li><b># Настройка отображения счета</b></li>
+            <li>score = 0</li>
+            <li>textX = 10</li>
+            <li>textY = 10</li>
+            <li>font = pygame.font.Font('freesansbold.ttf', 16)</li>
+            <li></li>
+            <li><b># Создаем окно</b></li>
+            <li>screen = pygame.display.set_mode((800,600))</li>
+            <li></li>
+            <li><b># Настройка заголовка и иконки</b></li>
+            <li>pygame.display.set_caption('Сквош')</li>
+            <li>icon = pygame.image.load('icon.png')</li>
+            <li>pygame.display.set_icon(icon)</li>
+            <li></li>
+            <li><b># Бита</b></li>
+            <li>paddle = pygame.image.load('paddle.png')</li>
+            <li>posX = 348</li>
+            <li>posY = 580</li>
+            <li>changeX = 0</li>
+            <li></li>
+            <li><b># Мячик</b></li>
+            <li>ball = pygame.image.load('ball.png')</li>
+            <li>ballX = 368</li>
+            <li>ballY = 556</li>
+            <li>changeBallX = 0</li>
+            <li>changeBallY = 0</li>
+            <li>play = 0</li>
+            <li></li>
+            <li><b># Функции в игре</b></li>
+            <li>def player(x,y):</li>
+            <li class="code__step">screen.blit(paddle,(x, y))</li>
+            <li></li>
+            <li>def seeball(x,y):</li>
+            <li class="code__step">screen.blit(ball,(x,y))</li>
+            <li></li>
+            <li>def show_score(x, y):</li>
+            <li class="code__step">view_score = font.render('Счет: ' + str(score), True, (255,255,255))</li>
+            <li class="code__step">screen.blit(view_score, (x,y))</li>
+            <li></li>
+            <li><b># Игровой цикл</b></li>
+            <li>run = True</li>
+            <li>while run:</li>
+            <li></li>
+            <li><b># Заливаем экран</b></li>
+            <li>screen.fill((0, 0, 100))</li>
+            <li></li>
+            <li><b># Обрабатываем действие при нажатии на кнопку "Закрыть"</b></li>
+            <li>for event in pygame.event.get():</li>
+            <li class="code__step">if event.type == pygame.QUIT:</li>
+            <li class="code__2-step">run = False</li>
+            <li></li>
+            <li class="code__step"><b># Проверяем нажатые кнопки</b></li>
+            <li class="code__step">if event.type == pygame.KEYDOWN:</li>
+            <li class="code__2-step">if event.key == pygame.K_LEFT:</li>
+            <li class="code__3-step">changeX = -1</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = -1</li>
+            <li></li>
+            <li class="code__2-step">elif event.key == pygame.K_RIGHT:</li>
+            <li class="code__3-step">changeX = 1</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = 1</li>
+            <li></li>
+            <li class="code__2-step">if event.key == pygame.K_SPACE:</li>
+            <li class="code__3-step">changeBallX = 1</li>
+            <li class="code__3-step">changeBallY = -1</li>
+            <li class="code__3-step">play = 1</li>
+            <li></li>
+            <li class="code__2-step">if event.type == pygame.KEYUP:</li>
+            <li class="code__3-step">changeX = 0</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = 0</li>
+            <li></li>
+            <li><b>#Вычисляем координаты мяча</b></li>
+            <li>ballX += changeBallX</li>
+            <li>ballY += changeBallY</li>
+            <li></li>
+            <li><b># Устанавливаем границы экрана для мяча</b></li>
+            <li>if play == 1:</li>
+            <li class="code__step">if ballX &gt;= 776:</li>
+            <li class="code__2-step">changeBallX = -1</li>
+            <li class="code__step">elif ballX &lt;= 0:</li>
+            <li class="code__2-step">changeBallX = 1</li>
+            <li>else:</li>
+            <li class="code__step">if ballX == 776 or ballX == 0:</li>
+            <li class="code__2-step">changeBallX = 0</li>
+            <li></li>
+            <li>if ballY == 0:</li>
+            <li class="code__step">changeBallY = 1</li>
+            <li class="code__step"><b># Изменяем направление движения мяча при столкновении с битой</b></li>
+            <li class="code__step">if play ==1:</li>
+            <li class="code__2-step">if ballY == 556:</li>
+            <li class="code__3-step">if posX-22 &lt; ballX &lt; posX+64:</li>
+            <li class="code__4-step">changeBallY = -1</li>
+            <li class="code__4-step">score += 1</li>
+            <li></li>
+            <li class="code__step"><b># Отображаем мяч</b></li>
+            <li class="code__step">seeball(ballX,ballY)</li>
+            <li></li>
+            <li class="code__step"><b># Отображаем счет</b></li>
+            <li class="code__step">show_score(textX, textY)</li>
+            <li></li>
+            <li class="code__step"><b># Вычисляем позицию биты</b></li>
+            <li class="code__step">posX += changeX</li>
+            <li></li>
+            <li class="code__step"><b># Устанавливаем границы для биты</b></li>
+            <li class="code__step">if posX &lt;= 0:</li>
+            <li class="code__2-step">posX = 0</li>
+            <li class="code__step">elif posX >= 734:</li>
+            <li class="code__2-step">posX = 734</li>
+            <li></li>
+            <li class="code__step"><b># Отображаем биту</b></li>
+            <li class="code__step">player(posX, posY)</li>
+            <li></li>
+            <li class="code__step"><b># Обновляем экран</b></li>
+            <li class="code__step">pygame.display.update()</li>
+        </ol>
+        <p>
+            Готовый файл с программой и все рисунки находятся в архиве, который можно скачать на
+            странице «Загрузки».
+        </p>
+    </div>
+    <div class="container">
+        <h2>Ну а теперь вкратце рассмотрим код игры.</h2>
+        <ol class="code">
+            <li>import pygame</li>
+            <li></li>
+            <li>pygame.init()</li>
+            <li></li>
+        </ol>
+        <p>
+            Здесь мы импортируем библиотеку PyGame. Именно с её помощью мы создаем игровой
+            экран, выводим изображения на него и даже текст.
+        </p>
+        <p>Строка pygame.init() производит инициализацию библиотеки.</p>
+        <ol class="code" start="5">
+            <li><b># Настройка отображения счета</b></li>
+            <li>score = 0</li>
+            <li>textX = 10</li>
+            <li>textY = 10</li>
+            <li>font = pygame.font.Font('freesansbold.ttf', 16)</li>
+        </ol>
+        <p>
+            В <b>строке 6</b> мы создаем переменную <b>score</b>, в которой будем хранить счет текущей игры и
+            присваиваем ей значение <b>0</b>. В переменных <b>textX</b> и <b>textY</b> хранятся координаты, по которым
+            будет выведено сообщение со счетом игры. В <b>9 строке</b> мы указываем шрифт и его размер,
+            который будем использовать для сообщения со счетом.
+        </p>
+        <ol class="code" start="10">
+            <li></li>
+            <li><b># Создаем окно</b></li>
+            <li>screen = pygame.display.set_mode((800,600))</li>
+            <li></li>
+        </ol>
+        <p>
+            В <b>строке 12</b> создаем экран размером 800 на 600 пикселей. Сохранив его в переменной
+            <b>screen</b>, в дальнейшем мы сможем изменять некоторые его параметры, такие как иконка и
+            заголовок окна:
+        </p>
+        <ol class="code" start='14'>
+            <li><b># Настройка заголовка и иконки</b></li>
+            <li>pygame.display.set_caption('Сквош')</li>
+            <li>icon = pygame.image.load('icon.png')</li>
+            <li>pygame.display.set_icon(icon)</li>
+        </ol>
+        <p>
+            В <b>строке 15</b>, при помощи функции <i>pygame.display.set_caption()</i> мы указываем желаемый
+            заголовок нашего окна. В моем случае это «Сквош». Можете поменять на желаемое.
+        </p>
+        <p>
+            В <b>строке 16</b> мы загружаем изображение иконки нашего окна в PyGame при помощи
+            <i>pygame.image.load()</i>. При помощи этой функции вообще грузится большинство изображений в
+            PyGame. Размер иконки, в моем случае, 24х24 пикселя. Можете нарисовать свою, если хотите
+            или скачать готовую из интернета — благо сейчас существует просто невероятное количество
+            бесплатных значков и рисунков. При помощи функции <i>pygame.display.set_icon()</i> мы
+            помещаем наше изображение в шапку окна.
+        </p>
+        <ol class="code" start="18">
+            <li></li>
+            <li><b># Бита</b></li>
+            <li>paddle = pygame.image.load('paddle.png')</li>
+            <li>posX = 348</li>
+            <li>posY = 580</li>
+            <li>changeX = 0</li>
+            <li></li>
+        </ol>
+        <p>
+            В <b>строке 20</b> мы загружаем изображение биты, размером 64х16 пикселей. В
+            переменных <b>posX</b> и <b>posY</b> указываем текущие координаты мяча. В
+            переменной <b>changeX</b> хранится величина, на которую будет изменятся положение биты во
+            время игры. Так как бита у нас двигается только горизонтально, то и значение смещения
+            только одно.
+        </p>
+        <ol class="code" start="25">
+            <li><b># Мячик</b></li>
+            <li>ball = pygame.image.load('ball.png')</li>
+            <li>ballX = 368</li>
+            <li>ballY = 556</li>
+            <li>changeBallX = 0</li>
+            <li>changeBallY = 0</li>
+            <li>play = 0</li>
+        </ol>
+        <p>
+            Здесь мы загружаем изображение мяча. Его стартовые координаты указываем в
+            переменных <b>ballX</b> и <b>ballY</b>. Поскольку мяч у нас движется в двух осях координат, следует
+            указать две переменные смещения, вертикального и
+            горизонтального: <b>changeBallX</b> и <b>changeBallY</b>. Переменная <b>play</b> используется для контроля
+            запуска игры. Чуть ниже будет описано, зачем это нужно.
+        </p>
+        <ol class="code" start="32">
+            <li></li>
+            <li><b># Функции в игре</b></li>
+            <li>def player(x,y):</li>
+            <li class="code__step">screen.blit(paddle,(x, y))</li>
+        </ol>
+        <p>
+            Первая функция, которую мы создаем, отвечает за вывод на экран биты с
+            координатами <b>x</b> и <b>y</b>. Для этого мы используем функцию <i>screen.blit()</i>, где <b>screen</b> — имя нашего
+            экрана. Так как координата <b>y</b> меняться не будет (бита движется только вдоль оси x), то
+            вместо нее можно сразу установить фиксированное значение. Тут уж как хотите. При помощи
+            этой функции в окно PyGame выводятся все наши изображения:
+        </p>
+        <ol class="code" start="36">
+            <li></li>
+            <li>def seeball(x,y):</li>
+            <li class="code__step">screen.blit(ball,(x,y))</li>
+            <li></li>
+            <li>def show_score(x, y):</li>
+            <li class="code__step">view_score = font.render('Счет: ' + str(score), True, (255,255,255))</li>
+            <li class="code__step">screen.blit(view_score, (x,y))</li>
+            <li></li>
+        </ol>
+        <p>
+            И вот здесь у вас может возникнуть вопрос: а зачем нам использовать <i>screen.blit()</i> для
+            вывода сообщения со счетом? Дело в том, что в самом PyGame нет никакой возможности
+            вывести непосредственно текст. Для начала его нужно отрендерить при помощи <i>font.render()</i>
+            (фактически создав рисунок из текста) и лишь потом вывести его на экран.
+        </p>
+        <ol class="code" start="44">
+            <li><b># Игровой цикл</b></li>
+            <li>run = True</li>
+            <li>while run:</li>
+        </ol>
+        <p>
+            При помощи переменной run запускаем игровой цикл. Пока значение этой переменной
+            равно <b>True</b> — игра будет продолжаться.
+        </p>
+        <ol class="code" start="47">
+            <li></li>
+            <li><b># Заливаем экран</b></li>
+            <li>screen.fill((0, 0, 100))</li>
+            <li></li>
+        </ol>
+        <p>
+            Здесь мы выполняем заливку нашего экрана цветом. Это нужно для того, чтобы стереть
+            изображения прошлого кадра. Если вы не понимаете, о чем речь, просто закоментируйте (или просто удалите)
+            <b>строку 49</b> и посмотрите, что получится.
+        </p>
+        <ol class="code" start="51">
+            <li><b># Обрабатываем действие при нажатии на кнопку "Закрыть"</b></li>
+            <li>for event in pygame.event.get():</li>
+            <li class="code__step">if event.type == pygame.QUIT:</li>
+            <li class="code__2-step">run = False</li>
+        </ol>
+        <p>
+            Любое действие пользователя, будь то нажатие на клавиатуру или на мышь, генерирует
+            событие. Отслеживая происходящие события мы можем влиять на игровой процесс,
+            поведение окна и т.д. Именно этим и занимается цикл for в <b>строке 52</b>. При нажатии на кнопку
+            «Закрыть окно» генерируется событие <i>pygame.QUIT</i>. В <b>строке 53</b> мы проверяем: если это
+            событие произошло, то переменной <b>run</b> присваивается значение <b>False</b> и окно с игрой
+            закрывается.
+        </p>
+        <ol class="code" start="56">
+            <li></li>
+            <li class="code__step"><b># Проверяем нажатые кнопки</b></li>
+            <li class="code__step">if event.type == pygame.KEYDOWN:</li>
+            <li class="code__2-step">if event.key == pygame.K_LEFT:</li>
+            <li class="code__3-step">changeX = -1</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = -1</li>
+            <li></li>
+            <li class="code__2-step">elif event.key == pygame.K_RIGHT:</li>
+            <li class="code__3-step">changeX = 1</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = 1</li>
+            <li></li>
+            <li class="code__2-step">if event.key == pygame.K_SPACE:</li>
+            <li class="code__3-step">changeBallX = 1</li>
+            <li class="code__3-step">changeBallY = -1</li>
+            <li class="code__3-step">play = 1</li>
+            <li></li>
+        </ol>
+        <p>
+            Кнопки имеют два состояния: <b>нажатое</b> (KEYDOWN) и <b>отжатое</b> (KEYUP). Это позволяет
+            нам управлять битой в зависимости от того нажал игрок на клавишу или отпустил её. Так, в
+            <b>строке 59</b> мы проверяем, нажал ли игрок кнопку «Влево». Если да, то двигаем биту влево
+            <b>(changeX = -1)</b>. Если игра еще не началась <b>(play = 0)</b>, то двигаем мяч вместе с битой. <b>Строки
+            64-67</b> выполняют те же функции, но для кнопки «Вправо».
+        </p>
+        <p>
+            В <b>строке 69</b> мы проверяем, нажал ли игрок кнопку «Пробел», что является сигналом к
+            старту игры. Если это событие произошло, то мяч начинает движение вправо-вверх.
+            Переменной <b>play</b> присваивается значение <b>1</b> и теперь движение мяча никак не связано с
+            движением биты.
+        </p>
+        <ol class="code" start="74">
+            <li class="code__2-step">if event.type == pygame.KEYUP:</li>
+            <li class="code__3-step">changeX = 0</li>
+            <li class="code__3-step">if play == 0:</li>
+            <li class="code__4-step">changeBallX = 0</li>
+        </ol>
+        <p>
+            В <b>строке 74</b> мы проверяем, отпустил ли игрок кнопки. В целом, конечно, нужно было бы
+            проверять каждую кнопку «Влево» и «Вправо» отдельно. Но так как у нас нет других
+            действий, где использовалось бы это события, то мы просто останавливаем биту при
+            отпускании любой кнопки. Так же, если игра не началась, мы останавливаем движение мяча
+            по горизонтали. Если этого не сделать, то мяч, после того как бита остановится, продолжит
+            свое движение, оттолкнется от стенки и полетит в другую сторону. И так до тех пор, пока не
+            будет нажата кнопка «Пробел».
+        </p>
+        <ol class="code" start="78">
+            <li></li>
+            <li><b>#Вычисляем координаты мяча</b></li>
+            <li>ballX += changeBallX</li>
+            <li>ballY += changeBallY</li>
+            <li></li>
+        </ol>
+        <p>
+            При каждом прохождении цикла нужно вычислять новые координаты мяча. Это
+            необходимо для того, чтобы отобразить его движение на экране. В зависимости от того, какие
+            действия произошли в игре, координаты <b>ballX</b> и <b>ballY</b> изменяются, что приводит к
+            соответствующему изменению положения мяча.
+        </p>
+        <ol class="code" start="83">
+            <li><b># Устанавливаем границы экрана для мяча</b></li>
+            <li>if play == 1:</li>
+            <li class="code__step">if ballX &gt;= 776:</li>
+            <li class="code__2-step">changeBallX = -1</li>
+            <li class="code__step">elif ballX &lt;= 0:</li>
+            <li class="code__2-step">changeBallX = 1</li>
+            <li>else:</li>
+            <li class="code__step">if ballX == 776 or ballX == 0:</li>
+            <li class="code__2-step">changeBallX = 0</li>
+            <li></li>
+            <li>if ballY == 0:</li>
+            <li class="code__step">changeBallY = 1</li>
+        </ol>
+        <p>
+            Здесь мы устанавливаем рамки для мяча, чтобы он не улетел за границу экрана. В <b>строке
+            84</b> мы проверяем, запущена ли игра. И если да, то при достижении мячом правой (<b>строка 85</b>)
+            или левой (<b>строка 87</b>) границы экрана, движение мяча на противоположное. Если игра еще не
+            началась, то при достижении правой или левой границ экрана мы останавливаем движение
+            мяча. Это нужно для того, чтобы вы не могли запихнуть мяч за границу экрана до того, как
+            начнется игра.
+        </p>
+        <p>
+            Если мяч достиг верхней границы экрана (<b>строка 93</b>), то вертикальное смещение
+            изменяем на положительное значение — мяч теперь будет двигаться вниз.
+        </p>
+        <ol class="code" start="95">
+            <li class="code__step"><b># Изменяем направление движения мяча при столкновении с битой</b></li>
+            <li class="code__step">if play ==1:</li>
+            <li class="code__2-step">if ballY == 556:</li>
+            <li class="code__3-step">if posX-22 &lt; ballX &lt; posX+64:</li>
+            <li class="code__4-step">changeBallY = -1</li>
+            <li class="code__4-step">score += 1</li>
+        </ol>
+        <p>
+            Теперь проверяем, столкнулся ли мяч с битой. Прежде всего, нужно проверить,
+            идет ли игра (<b>строка 96</b>). Если да, то проверяем, достиг ли мяч нижней границы
+            экрана (<b>строка 97</b>). Если мяч достиг нижней части экрана, проверяем, находится
+            ли под ним бита (<b>строка 98</b>) и если мяч находится над битой, то изменяем его
+            смещение по вертикальной оси на противоположное и добавляем одно очко к
+            счету. Теперь обратим внимание на строку <i>if posX-22 &lt; ballX &lt; posX+64</i>. Если с
+            правой частью выражения все понятно (длина биты) то с левой не совсем. Дело в
+            том, что мяч отрисовывается сверху вниз, слева направо. То есть расчет ведется
+            относительно верхнего левого угла изображения. И <b>posX-22</b> заменить на <b>posX</b>, То
+            мяч часто будет пролетать сквозь левый край биты, хотя визуально находился над
+            ней. Можете попробовать внести это изменение и наглядно увидеть результат.
+        </p>
+        <ol class="code" start="101">
+            <li></li>
+            <li class="code__step"><b># Отображаем мяч</b></li>
+            <li class="code__step">seeball(ballX,ballY)</li>
+            <li></li>
+            <li class="code__step"><b># Отображаем счет</b></li>
+            <li class="code__step">show_score(textX, textY)</li>
+            <li></li>
+        </ol>
+        <p>Отображаем текущую позицию мяча и счет игры.</p>
+        <ol class="code" start="108">
+            <li class="code__step"><b># Вычисляем позицию биты</b></li>
+            <li class="code__step">posX += changeX</li>
+            <li></li>
+            <li class="code__step"><b># Устанавливаем границы для биты</b></li>
+            <li class="code__step">if posX &lt;= 0:</li>
+            <li class="code__2-step">posX = 0</li>
+            <li class="code__step">elif posX >= 734:</li>
+            <li class="code__2-step">posX = 734</li>
+            <li></li>
+        </ol>
+        <p>
+            Устанавливаем границы экрана для биты, чтобы она не убегала за его пределы при
+            слишком долгом нажатии на кнопку «Влево» или «Вправо».
+        </p>
+        <ol class="code" start="117">
+            <li class="code__step"><b># Отображаем биту</b></li>
+            <li class="code__step">player(posX, posY)</li>
+            <li></li>
+            <li class="code__step"><b># Обновляем экран</b></li>
+            <li class="code__step">pygame.display.update()</li>
+        </ol>
+        <p>
+            В <b>строке 118</b> мы отображаем биту на экране. А в <b>строке 121</b> обновляем экран, чтобы
+            увидеть внесенные изменения (новый кадр).
+        </p>
+    </div>
+    <footer>
+        <a href="https://up-school.online/" target="_blank"><img src="../img/upschool2.png" height="70" alt=""></a>
+        <h4>На этом всё!</h4>
+        <h3>Успехов!</h3>    
+    </footer>
+</body>
+</html>

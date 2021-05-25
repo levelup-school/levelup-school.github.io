@@ -146,8 +146,9 @@ h6, button, select {
     .filters{
         margin-top: 40px;
     }
-    #mapSelected{
+    .filter{
         padding: 7px;
+        margin-right: 5px;
         border: 1px solid $orange;
         outline: none;
         border-radius: 5px;
@@ -158,8 +159,8 @@ h6, button, select {
         &:hover{
             filter: drop-shadow(8px 8px 10px gray);
         }
-    }
 
+    }
     #toTop {
         z-index: 100;
         display: none;
@@ -210,7 +211,7 @@ h6, button, select {
     .right-head{
         z-index: 100;
         position: absolute;
-        right: 50px;
+        right: 100px;
         top: 15px;
     }
     .openMore{
@@ -259,24 +260,29 @@ h6, button, select {
     &__pack {
         margin: 30px 15% 100px;
     }
-
     &__header {
         @include textFormat(40px, 600, $gray);
         letter-spacing: 6px;
         padding: 7px 0;
         text-align: center;
         cursor: pointer;
-        margin: 60px 0 30px;
+        margin: 60px 0 10px;
         transition: all .3s ease;
         &:hover{
             background: rgb(233, 240, 245);
             color: black;
         }
     }
+    &__descr{
+        text-align: center;
+        font-family: 'Jura', sans-serif;
+
+    }
     &__items {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 30px;
     }
 
     &__item {

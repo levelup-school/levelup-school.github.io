@@ -1,0 +1,33 @@
+.anim{
+    position: relative;
+}
+.animbomb{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animbomb 10s ease infinite;
+}
+@keyframes animbomb{
+    40%{transform: rotate(0deg);}
+    50%{left: 100%; transform: rotate(180deg)}
+    90%{transform: rotate(180deg)}
+    100%{transform: rotate(0deg)}
+}
+.animcan{
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    animation: animcan 5s ease infinite;
+}
+@keyframes animcan{
+    50%{transform: rotate(-7deg)}
+}
+.animcastle{
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    animation: animtow 5s ease infinite;
+}
+@keyframes animtow{
+    50%{transform: translateX(5px) translateY(5px)}
+}

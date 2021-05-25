@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black url(./img/bg_salat1.jpg) no-repeat;
+    background-size: 100% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+}
+.ta-c{
+    text-align: center;
+}
+.block{
+    background: #ffffff;
+    box-shadow: 1px 1px 20px #473327;
+    padding: 20px 0 25px;
+    margin: 30px 0;
+}
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(#af7d7d, #699c7d);
+    padding: 20px 50px;
+    opacity: .9;
+}
+h1{
+    text-align: center;
+    box-shadow: 1px 1px 20px #e23c12;
+    color: rgb(231, 90, 71);
+    background: #ffffff;
+    width: 400px;
+    padding: 15px;
+    margin: 15px auto 50px;
+}
+
+/* values */
+.value{
+    text-align: center;
+    text-transform: uppercase;
+}
+.value h3{
+    margin: 15px 0 30px;
+}
+.value-items{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+}
+.value-name{
+    margin-bottom: 10px;
+}
+.value-num{
+    font-size: 25px;
+    font-weight: bold;
+}
+.value-dimention{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* ingredients, instruction, bon appetit */
+.list{
+    padding: 5px 30px;
+    line-height: 2em;
+}
+.instruction li{
+    margin: 30px 0;
+}
+.appetit{
+    font-family: cursive;
+    font-size: 60px;
+    color: #d8c51e;
+    text-shadow: 3px 3px 10px #2e2806;
+    letter-spacing: 4px;
+}

@@ -1,0 +1,69 @@
+.container_2{
+	display: flex;
+	flex-direction:column;
+	height: 100%;
+	padding: 10px;
+	width:90%;
+	margin: 50px auto;
+}
+.container_2 img{
+	width: 25%;
+    padding-right:10px;
+}
+
+.flex-sesameStreet{
+	display: flex;
+	padding:35px;
+	flex-direction:row;
+	align-items: center;
+	border: 3px solid #edff57;
+	margin-bottom:10px;
+	width: 30%;
+	border-radius: 40%;
+}
+
+.flex1{
+	display: flex;
+	justify-content: space-between;
+}
+.flex2{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.flex3{
+	display: flex;
+	justify-content: center;
+}
+
+.bigBird strong{
+	color: #ff7500;
+}
+.cookieMonster strong{
+	color: #8fddff;
+}
+.bert-ernie strong{
+	color: #f72f33;
+}
+.oscar strong{
+	color: #ce6e19;
+}
+.elmo strong{
+	color: #ffb25d;
+}
+
+.bigBird{
+	background-color: #efdb6b; 
+}
+.cookieMonster{
+	background-color: #8db6c7; 
+}
+.bert-ernie{
+	background-color: #f7b364; 
+}
+.oscar{
+	background-color: #95d660; 
+}
+.elmo{
+	background-color: #e66663; 
+}

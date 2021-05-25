@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f3eaea;
+    font-family: 'Alice', serif;}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 1px 50px;
+    border-left: 80px solid #c4d3c4;
+    border-right: 80px solid #c4d3c4;
+}
+.ta-c{
+    text-align: center;
+}
+h1,h2,h3,h4{
+    font-family: 'Pacifico', cursive;
+}
+h1{
+    color: #ee420e;
+    font-size: 40px;
+}
+.sharlot{
+    font-size: 20px;
+}
+.sharlot span{
+    color: #ee420e;
+    font-weight: bold;
+}
+
+
+.res{
+    background-color: #c4d3c4;
+    padding: 20px;
+    margin: 20px 0;
+}
+.start-res{
+    font-size: 30px;
+    text-decoration: underline;
+    margin: 100px 0 70px;
+}
+
+.needs{
+    border: 2px solid black;
+    padding: 30px;
+    font-size: 20px;
+    margin: 15px 0;
+}
+.needs p{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+}
+.needs ul{
+    background-color: rgb(209, 194, 194);
+    padding: 5px 30px;
+}
+.needs li{
+    margin: 20px 0;
+}
+.imgp img{
+    width: 100%;
+}
+
+.steps{
+    font-size: 20px;
+    margin: 50px 0;
+    padding: 30px;
+    border: 2px solid black;
+}
+.steps p{
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 20px;
+}
+.steps ol{
+    background-color: rgb(209, 194, 194);
+    padding: 5px 30px;
+}
+.steps li{
+    margin: 20px 0;
+}

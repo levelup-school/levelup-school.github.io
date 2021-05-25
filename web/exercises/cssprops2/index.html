@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Свойства</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./css.png">
+</head>
+<body>
+    <div class="nav">
+        <a href="#box-shadow">box-shadow</a>
+        <a href="#text-shadow">text-shadow</a>
+        <a href="#word-spacing">word-spacing</a>
+        <a href="#text-indent">text-indent</a>
+        <a href="#background">background</a>
+        <a href="#linear-gradient">linear-gradient</a>
+        <a href="#radial-gradient">radial-gradient</a>
+        <a href="#opacity">opacity</a>
+    </div>
+    
+    <h1>CSS Свойства - Примеры использования</h1>
+
+    <div id="box-shadow" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">1</p>
+                <h2 class="prop__title">Box-shadow</h2>
+                <div class="box-shadow d-flex">
+                    <div class="box-shadow__item box-shadow__item1">
+                        <span class="blue">box-shadow</span>: <span class="green">5px 5px 15px #170a64</span>;
+                    </div>
+                    <div class="box-shadow__item">Нету тени</div>
+                    <div class="box-shadow__item box-shadow__item3">
+                        <span class="blue">box-shadow</span>: <span class="green">5px 5px 0px #170a64</span>;
+                    </div>
+                    <div class="box-shadow__item box-shadow__item4">
+                        <span class="blue">box-shadow</span>: <span class="green">5px 5px 50px green</span>;
+                    </div>
+                    <div class="box-shadow__item box-shadow__item5">
+                        <span class="blue">box-shadow</span>: <span class="green">0px 0px 25px #d61676</span>;
+                    </div>
+                    <div class="box-shadow__item box-shadow__item6">
+                        <span class="blue">box-shadow</span>: <span class="green">-5px -5px 0px #170a64</span>;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="text-shadow" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">2</p>
+                <h2 class="prop__title">Text-shadow</h2>
+                <div class="text-shadow d-flex">
+                    <div class="text-shadow__item">
+                        <p><span class="blue">text-shadow</span>: <span class="green">5px 5px 15px red</span>;</p>
+                        <p class="text-shadow__shadow text-shadow__shadow1">Текст с тенью</p>
+                    </div>
+                    <div class="text-shadow__item">
+                        <p>Тень не задана</p>
+                        <p class="text-shadow__shadow">Текст без тени</p>
+                    </div>
+                    <div class="text-shadow__item">
+                        <p><span class="blue">text-shadow</span>: <span class="green">5px 5px 0px #b1b1b1</span>;</p>
+                        <p class="text-shadow__shadow text-shadow__shadow2">Текст с тенью</p>
+                    </div>
+                    <div class="text-shadow__item">
+                        <p><span class="blue">text-shadow</span>: <span class="green">-5px -5px 15px red</span>;</p>
+                        <p class="text-shadow__shadow text-shadow__shadow3">Текст с тенью</p>
+                    </div>
+                    <div class="text-shadow__item">
+                        <p><span class="blue">text-shadow</span>: <span class="green">0px 0px 30px #d816a7</span>;</p>
+                        <p class="text-shadow__shadow text-shadow__shadow4">Текст с тенью</p>
+                    </div>
+                    <div class="text-shadow__item">
+                        <p><span class="blue">text-shadow</span>: <span class="green">-5px -5px 0px #b1b1b1</span>;</p>
+                        <p class="text-shadow__shadow text-shadow__shadow5">Текст с тенью</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="word-spacing" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">3</p>
+                <h2 class="prop__title">Word-spacing</h2>
+                <div class="word-spacing">
+                    <p class="word-spacing__prop"><span class="blue">word-spacing</span> не задан.</p>
+                    <p class="word-spacing__item">Сегодня апрель и на улице выпал снег! Правда он сразу растаял.</p>
+                </div>
+                <div class="word-spacing">
+                    <p class="word-spacing__prop"><span class="blue">word-spacing</span>: <span class="green">20px</span>;</p>
+                    <p class="word-spacing__item  word-spacing__item1">Сегодня апрель и на улице выпал снег! Правда он сразу растаял.</p>
+                </div>
+                <div class="word-spacing">
+                    <p class="word-spacing__prop"><span class="blue">word-spacing</span>: <span class="green">50px</span>;</p>
+                    <p class="word-spacing__item  word-spacing__item2">Сегодня апрель и на улице выпал снег! Правда он сразу растаял.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="text-indent" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">4</p>
+                <h2 class="prop__title">Text-indent</h2>
+                <div class="text-indent">
+                    <p class="text-indent__prop"><span class="blue">text-indent</span> не задан.</p>
+                    <p class="text-indent__item">
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                    </p>
+                </div>
+                <div class="text-indent">
+                    <p class="text-indent__prop"><span class="blue">text-indent</span>: <span class="green">50px</span>;</p>
+                    <p class="text-indent__item  text-indent__item1">
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                    </p>
+                </div>
+                <div class="text-indent">
+                    <p class="text-indent__prop"><span class="blue">text-indent</span>: <span class="green">100px</span>;</p>
+                    <p class="text-indent__item  text-indent__item2">
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                        Сегодня апрель и на улице выпал снег! Правда он сразу растаял.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="background" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">5</p>
+                <h2 class="prop__title">Background</h2>
+                <p>Всем элементам ниже задана высота 300px и ширина 500px (<b>height</b>: <b class="green">300px</b>; <b>width</b>: <b class="green">500px</b>;).</p>
+                <div class="background d-flex">
+                    <div class="background__item background__bg1">
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg) no-repeat center</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">cover</b>;
+                    </div>
+                    <div class="background__item background__bg2">
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg)</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">250px</b>;
+                    </div>
+                    <div class="background__item background__bg3">
+                        <b class="blue">background</b>: <b class="green2">purple url(./map.jpg) no-repeat right</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">300px</b>;
+                    </div>
+                    <div class="background__item background__bg4">
+                        <b class="blue">background</b>: <b class="green2">gray url(./map.jpg) no-repeat right top</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">300px</b>;
+                    </div>
+                    <div class="background__item background__bg5">
+                        <b class="blue">У элемента увеличена ширина</b><br>
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg) no-repeat fixed</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">cover</b>;
+                    </div>
+                    <div class="background__item background__bg5">
+                        <b class="blue">У элемента увеличена ширина</b><br>
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg) no-repeat fixed</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">cover</b>;
+                    </div>
+                    <div class="background__item background__bg6">
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg) no-repeat fixed</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">cover</b>;
+                    </div>
+                    <div class="background__item background__bg6">
+                        <b class="blue">background</b>: <b class="green2">url(./map.jpg) no-repeat fixed</b>;<br>
+                        <b class="blue">background-size</b>: <b class="green2">cover</b>;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="linear-gradient" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">6</p>
+                <h2 class="prop__title">Linear-gradient</h2>
+                <p>Всем элементам ниже задана высота 100px и ширина 500px (<b>height</b>: <b class="green">100px</b>; <b>width</b>: <b class="green">500px</b>;).</p>
+                <div class="linear-gradient d-flex">
+                    <div class="linear-gradient__item linear-gradient__item1">
+                        <b class="blue">background</b>: <b class="green">linear-gradient(white, #14dac9)</b>;
+                    </div>
+                    <div class="linear-gradient__item linear-gradient__item2">
+                        <b class="blue">background</b>: <b class="green">linear-gradient(#cecb23, #194ad3, #e02b2b)</b>;
+                    </div>
+                    <div class="linear-gradient__item linear-gradient__item3">
+                        <b class="blue">background</b>: <b class="green2">linear-gradient(90deg, #ce9223, #194ad3)</b>;
+                    </div>
+                    <div class="linear-gradient__item linear-gradient__item4">
+                        <b class="blue">background</b>: <b class="green2">linear-gradient(-90deg, #ce9223, #194ad3)</b>;
+                    </div>
+                    <div class="linear-gradient__item linear-gradient__item5">
+                        <b class="blue">background</b>: <b class="green2">linear-gradient(45deg, #9dd814, #cd19d3)</b>;
+                    </div>
+                    <div class="linear-gradient__item linear-gradient__item6">
+                        <b class="blue">background</b>: <b class="green2">linear-gradient(-45deg, #9dd814, #cd19d3)</b>;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="radial-gradient" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">7</p>
+                <h2 class="prop__title">Radial-gradient</h2>
+                <p>Всем элементам ниже задана высота 500px и ширина 500px (<b>height</b>: <b class="green">500px</b>; <b>width</b>: <b class="green">500px</b>;).</p>
+                <div class="radial-gradient d-flex">
+                    <div class="radial-gradient__item radial-gradient__item1">
+                        <b class="blue">background</b>: <b class="green">radial-gradient(white, #14dac9)</b>;
+                    </div>
+                    <div class="radial-gradient__item radial-gradient__item2">
+                        <b class="blue">background</b>: <b class="green2">radial-gradient(#cfce69, #4566c0, #eea2a2)</b>;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="opacity" class="prop">
+        <div class="container">
+            <div class="prop__inner">
+                <p class="prop__num">8</p>
+                <h2 class="prop__title">Opacity</h2>
+                <p>Для наглядности добавлен задний фон, иначе вы не поймете есть ли прозрачность или нет.</p>
+                <p>Элементам ниже тоже задан задний фон (розовый цвет), высота 100px и ширина 500px (<b>height</b>: <b class="green">100px</b>; <b>width</b>: <b class="green">500px</b>;)</p>
+                <div class="opacity d-flex">
+                    <div class="opacity__item opacity__item1">
+                        <b class="blue2">opacity</b>: <b class="green3">1</b>;
+                    </div>
+                    <div class="opacity__item opacity__item5">
+                        <b class="blue2">opacity</b>: <b class="green3">0.9</b>;
+                    </div>
+                    <div class="opacity__item opacity__item7">
+                        <b class="blue2">opacity</b>: <b class="green3">0.8</b>;
+                    </div>
+                    <div class="opacity__item opacity__item6">
+                        <b class="blue2">opacity</b>: <b class="green3">0.7</b>;
+                    </div>
+                    <div class="opacity__item opacity__item8">
+                        <b class="blue2">opacity</b>: <b class="green3">0.6</b>;
+                    </div>
+                    <div class="opacity__item opacity__item2">
+                        <b class="blue2">opacity</b>: <b class="green3">0.5</b>;
+                    </div>
+                    <div class="opacity__item opacity__item9">
+                        <b class="blue2">opacity</b>: <b class="green3">0.4</b>;
+                    </div>
+                    <div class="opacity__item opacity__item3">
+                        <b class="blue2">opacity</b>: <b class="green3">0.3</b>;
+                    </div>
+                    <div class="opacity__item opacity__item10">
+                        <b class="blue2">opacity</b>: <b class="green3">0.2</b>;
+                    </div>
+                    <div class="opacity__item opacity__item4">
+                        <b class="blue2">opacity</b>: <b class="green3">0.1</b>;
+                    </div>
+                </div>
+                <p>Значение <b class="blue2">opacity</b> равное <b class="green3">0</b> сделает элемент полностью невидимым.</p>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/exam.png">
+    <title>Попади в цель</title>
+    <meta property="og:image" content="../../img/exam.png">
+    <meta property="og:title" content="Задачи по Scratch | Попади в цель">
+    <meta property="og:site_name" content="Upschool Scratch-task">
+    <link rel="stylesheet" href="../css/tuuli_checkbox.css">
+    <link rel="stylesheet" href="../css/ready_btn.css">
+    <link rel="stylesheet" href="../css/scratch.css">
+    <link rel="stylesheet" href="../css/modal_fireworks.css">
+    <link rel="stylesheet" href="../css/hover_top_tooltip.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+<body class="ta-c f-18">
+    <div class="d-f j-sb container py-10">
+        <div><a href="https://up-school.online/" target="_blank"><img src="../../img/upschool.png" height="50" alt=""></a></div>
+        <!-- lang div here -->
+    </div>
+    <h1 class="my-1 py-7 tt-u ls-5 blue">Попади в цель</h1>
+
+    <div class="container f-2r lblue-bg p-30 my-3">
+        <p class="step blue">1</p>
+        <p class="my-5 f-12e f-imp s-plate motion">Познакомься с правилами игры</p>
+        <p class="f-06e lh-15">Ознакомься с правилами и попробуй сделать эту игру сам, тебе понадобится две <span class="s-plate variable">переменные</span>, <span class="s-plate events">клоны</span> и <span class="s-plate events">сообщение</span>. Если не получается, то следуй указаниям ниже.</p>
+        <p class="ta-l mt-3 f-08e">Правила игры:</p>
+        <ul class="ta-l w-800 mx-a f-08e my-3">
+            <li class="my-2">Ваша задача как можно быстрее нажимать на зелёный мячик, чтобы набрать как можно больше очков за 25 секунд;</li>
+            <li class="my-2 lh-15">Нажав на мячик он удаляется и сразу появляется новый (все мячи это клоны одного мячика);</li>
+            <li class="my-2">Если ничего не нажимать, то мячи будут появляется каждые 5 сек;</li>
+            <li class="my-2">Если ничего не нажимать, мяч будет постепенно уменьшается, после чего удалится.</li>
+        </ul>
+        <p class="f-06e">Нажми на <span class="s-plate green-flag">флажок</span>.</p>
+        <div>
+            <iframe class="b-bor2 my-2" src="https://scratch.mit.edu/projects/519595347/embed" allowtransparency="true" width="840" height="680" frameborder="0" scrolling="no" allowfullscreen></iframe>    
+        </div>
+        <div class="mt-3 w-600 d-f ai-c j-sb mx-a">
+            <span class="f-08e b-l5 p-7">Проект понятен?</span> 
+            <button class="show-next-btn f-08e btn-1" data-display=".areUSure">Да</button>
+        </div>
+        <div class="areUSure d-n mt-3">
+            <div class="w-600 d-f ai-c j-sb mx-a">
+                <span class="f-08e b-l5 p-7">Тогда начинаем?</span> 
+                <button class=" show-next-btn btn-1 f-08e" data-display=".level2" data-scroll>Да</button>
+            </div> 
+        </div>
+    </div>
+    <!-- d-n -->
+    <div class="level2 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">2</p>
+        <h3 class="mt-5">Подготовка</h3>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a ta-l">Добавь фон и спрайт нашей мишени.</p>
+
+
+        <button class="show-next-btn btn-1 f-08e" data-display=".level3" data-scroll>Добавил</button>
+    </div>
+
+    <div class="level3 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">3</p>
+        <h6 class="mt-5">Сбивать мы будем клоны нашей мишени. Напишем скрипт для мячика (мишень):</h6>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l ti">
+            <span class="s-plate events">Когда</span> начнется игра спрайт <span class="s-plate looks">спрячется</span> и <span class="s-plate control">создаст</span> 
+            клон самого себя, после чего мы будем <span class="s-plate control">(повторять)</span> 4 раза: <span class="s-plate control">ждать</span>
+            5 секунд и <span class="s-plate control">создавать</span> новый клон.
+        </p>
+        <button class="show-next-btn btn-1 f-08e" data-display=".level4" data-scroll>Сделал, идем дальше!</button>
+    </div>
+
+    <div class="level4 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">4</p>
+        <h6 class="mt-5">Для клонов мы напишем два скрипта.</h6>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l ti">
+            Первый скрипт будет уменьшать нашу мишень, чтобы в неё было сложнее попасть.
+            <span class="s-plate events">Когда</span> мы начинаем как клон, <span class="s-plate motion">переходим</span> 
+            на случайное положение, <span class="s-plate looks">показываемся</span> 
+            и устанавливаем <span class="s-plate looks">размер</span> (например на 40%), затем <span class="s-plate control">4 раза</span>:
+            <span class="s-plate control">ждем</span> 0.65 секунд и уменьшаем <span class="s-plate looks">размер</span> (например на -7%).
+            <br>После этого нужно удалить <span class="s-plate control">клон</span>.
+        </p>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l ti">
+            Второй скрипт клона будет для начисления очков.
+            <br><span class="s-plate events">Когда</span> начинаем как клон, мы <span class="s-plate control">ждем</span>
+            <span class="s-plate sensor">касания</span> мыши <span class="s-plate operators">и</span> <span class="s-plate sensor">нажатия</span> мыши,
+            после чего <span class="s-plate variable">меняем</span> счет на 1 очко,
+            <span class="s-plate control">создаем</span> новый клон и <span class="s-plate control">удаляем</span> старый клон.
+        </p>
+        <button class="show-next-btn btn-1 f-08e" data-display=".level5" data-scroll>Идем дальше</button>
+    </div>
+
+    <div class="level5 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">5</p>
+        <h6 class="mt-5">Создадим скрипт-таймер:</h6>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l ti">
+            Создаем новую переменную время. <span class="s-plate events">Когда</span> начинается игра
+            <span class="s-plate variable">задаем</span> переменной значение время 25 (или любое другое),
+            <span class="s-plate control">повторяем</span> 25 раз команду <span class="s-plate control">ждать</span> 1 секунду и
+            <span class="s-plate variable">изменить</span> время на -1, после чего
+            <span class="s-plate events">передаем</span> сообщение «Конец».
+        </p>
+        <button class="show-next-btn btn-1 f-08e" data-display=".level6" data-scroll>Дальше</button>
+    </div>
+
+    <div class="level6 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">6</p>
+        <h6 class="mt-5">Сообщение «Конец»</h6>
+        <p class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l ti">
+            Добавим в спрайт мишени (мяч) получение сообщения “Конец”.
+            <span class="s-plate events">Когда</span> получим сообщение добавим
+            команду <span class="s-plate control">стоп</span> другие скрипты спрайта и <span class="s-plate control">удалить</span> клон.
+
+        </p>
+        <div class="w-800 mx-a d-f j-sb">
+            <button class="show-next-btn btn-1 f-08e" data-display=".level7" data-scroll>Дополнительное задание</button>
+
+            <button class="show-next-btn btn-1 f-08e" data-display=".level8" data-scroll>Игра готова</button>
+        </div>
+    </div>
+    
+    <div class="level7 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">7</p>
+        <h6 class="mt-5">Дополнительное задание</h6>
+        <ol class="w-800 f-12r p-30 lorange-bg my-4 mx-a lh-2 ta-l">
+            <li>
+                Добавить в игру новые цели, например: <br>При нажатии на Цель2 будут <span class="s-plate variable">отниматься</span> очки. 
+                <br>При нажатии на Цель3 будет <span class="s-plate variable">увеличиваться</span> время на 2 секунды.
+            </li>
+            <li>Добавить в игру <span class="s-plate sound">звуки</span>.</li>
+            <li>Сделать так, чтобы, после окончания времени, можно было <span class="s-plate events">начать</span> новую игру.</li>
+        </ol>
+        <button class="show-next-btn btn-1 f-08e" data-display=".level8" data-scroll>Игра готова</button>
+    </div>
+
+    <div class="level8 container f-2r b-bor4 p-20 my-5 d-n"> 
+        <p class="step orange mt-3">8</p>
+        <div class="w-800 f-12r p-30 lorange-bg my-4 mx-a">
+            <p class="lorange-bg2 lh-15 p-7 mb-3">Точно всё сделал?)):</p>
+            <p class="ta-r w-700 mx-a">готово:</p>
+            <ol class="ta-l mx-a w-700">
+                <li class="lh-2  my-2">
+                    <div class="d-f j-sb">
+                        <p class="lh-1r">Все сделал, не беспокойтесь!)</p>
+                        <div class="toggle-button toggle-button--tuuli">
+                            <input id="toggleButton1" type="checkbox">
+                            <label for="toggleButton1"></label>
+                            <div class="toggle-button__icon"></div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ol>
+        </div>
+        <div class="tooltip">
+            <button id="ready-btn" class="btn unready-btn">Готово</button>
+            <span class="tooltiptext w-400 f-16">
+                Сделай все задания и поставь все галочки напротив каждого задания.
+            </span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a class="middle" href="https://up-school.online/" title="На страницу школы Up-School" target="_blank">
+            <img src="../../img/upschool2.png" height="70" alt="">
+        </a>
+        <h2 class="orange">Успехов!</h2>
+    </footer>
+
+    <div class="posR">
+        <div class="modal">
+            <div class="modal-letter">
+                <h3>Молодец!</h3>
+                <p>Покажи результат учителю.</p>
+                <button class="btn ok-btn" onclick="hideModal()">ok</button>
+            </div>
+            <div class="background-plate">
+                <!-- no css required for this fireworks -->
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="../js/readyListBtn.js"></script>
+</body>
+</html>

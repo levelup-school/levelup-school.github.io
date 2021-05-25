@@ -2,6 +2,7 @@
 
 (function(){
     const listItems = document.querySelectorAll('[type="checkbox"]'),
+        showNextBtns = document.querySelectorAll('.show-next-btn'),
         readyBtn = document.getElementById('ready-btn'),
         link = readyBtn.getAttribute('data-link'),
         modal = document.querySelector('.modal'),
@@ -51,5 +52,55 @@
     function hideModal (){
         modal.style.display = 'none';
         document.body.style.overflow = '';
+    }
+
+    // Show next block button
+    if ( showNextBtns.length != 0){
+        showNextBtns.forEach(btn =>{
+            btn.addEventListener('click', ()=>{
+                const showBlock = document.querySelectorAll(btn.getAttribute('data-display'));
+
+                showBlock.forEach(showItem =>{
+                    showItem.style.display = "block";
+                    // btn.classList.remove('ready-btn');
+                    btn.classList.add('btn-checked');
+                    if (btn.getAttribute('data-scroll') != null){
+                        scrollToDiv(showItem);
+                    }
+                });
+                
+            });
+        });
+    }
+    
+
+    // smooth scroll ==============================================
+    function scrollToDiv(target) {
+        function getPosition() {
+            let i = target.offsetTop + target.offsetParent.offsetTop;
+            return i;
+        }
+        const targetPosition = getPosition();
+        let startPosition = window.pageYOffset;
+        let difference = targetPosition - startPosition;
+        let start = null;
+        let duration = 600;
+
+        window.requestAnimationFrame(step);
+
+        function step(timestamp) {
+            if (!start) {
+                start = timestamp;
+            }
+            let progress = timestamp - start;
+            window.scrollTo(0, easeInOutSine(progress, startPosition, difference, duration));
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            }
+        }
+    }
+    //easing function
+    function easeInOutSine(t, b, c, d) {
+        return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
     }
 }());

@@ -1,0 +1,8 @@
+.anim{
+    position: relative;
+}
+.anim__crow{
+    position: absolute;
+    top: -20px;
+    right: -15px;
+}

@@ -1,10 +1,15 @@
 div{
-    width: 160px;
-    font-size: 120px;
-    font-family: Arial;
-    text-align: center;
-    padding: 20px 10px;
-    color: #c2e0e2;
-    background: #336957;
-    margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:  center;
+  padding: 5px 10px 10px;
+  width: 100px;
+  
+  background: url(./map.jpg) center;
+  background-size: cover;
+}
+p{
+  color: #ffffff;
+  padding: 15px 0;
+  background: linear-gradient(90deg, #158dd3, #e7712c);
+  opacity: 0.7;
 }

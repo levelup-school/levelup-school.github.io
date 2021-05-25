@@ -1,0 +1,53 @@
+.arrow{
+    right: 10px;
+    top: -35px;
+    transform: rotate(-205deg);
+    transition: all .2s ease;
+    animation: anim1 5s ease-in-out infinite;
+}
+.arrow:hover{
+    transform: scale(1.2);
+}
+@keyframes anim1 {
+    50%{transform: rotate(-205deg) scale(1.2);}
+}
+.goto{
+    bottom: 10px;
+    left: -40px;
+    transform: rotate(30deg);
+    animation: anim2 5s ease-in-out infinite;
+}
+@keyframes anim2 {
+    50%{transform: rotate(30deg) translateX(-20px);}
+}
+.scale{
+    bottom: -20px;
+    left: 40%;
+    transform: rotate(-10deg);
+    animation: anim3 5s ease-in-out infinite;
+}
+.anim:hover{
+    animation-duration: .5s;
+}
+@keyframes anim3 {
+    50%{transform: rotate(-10deg) scale(1.2);}
+}
+.direct{
+    right: 20px;
+    bottom: 10px;
+    transform: rotate(-35deg);
+    animation: anim4 5s ease-in-out infinite;
+}
+@keyframes anim4 {
+    50%{transform: rotate(0deg);}
+}
+.start{
+    top: -70px;
+    right: 0;
+    transform: rotate(25deg) scale(1.5);
+}
+.repeat10{
+    right: -20px;
+    top: -50px;
+    transform: rotate(10deg);
+}

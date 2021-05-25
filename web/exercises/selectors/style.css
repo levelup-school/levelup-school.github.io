@@ -1,0 +1,52 @@
+body{
+    background-color: #5c315c;
+    color: rgb(195, 218, 213);
+    text-align: center;
+    font-family: Arial;
+}
+h1{
+    letter-spacing: 15px;
+}
+.litera{
+    font-size: 50px;
+    color: rgb(129, 129, 19);
+}
+ol{
+    text-align: left;
+    margin: 0 auto;
+    color: black;
+    border: 2px solid black;
+    width: 400px;
+    padding: 15px 5px 15px 35px;
+    background-color: rgb(194, 194, 30);
+}
+.blue{
+    color: rgb(133, 114, 216);
+}
+.color2{
+    color: chocolate;
+}
+.color3{
+    color: rgb(91, 146, 190);
+}
+.title2{
+    margin-top: 100px;
+}
+.linkto{
+    margin: 50px 0 0;
+}
+.bottom{
+    margin: 50px auto;
+    border: 2px dashed black;
+    width: 300px;
+}
+.bottom h2{
+    text-decoration: underline;
+}
+.bottom p{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.bottom:hover{
+    background-color: #854985;
+}

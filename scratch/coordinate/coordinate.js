@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
     
     axisX.onmousemove = () => setX(1);
-    axisY.onmousemove = () => setY(1);
+    axisY.onmousemove = () => setY(1);        
     
     inputX.oninput = () => setX(2);
     inputY.oninput = () => setY(2);

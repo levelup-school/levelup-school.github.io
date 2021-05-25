@@ -1,13 +1,17 @@
+#alertwin *{
+    margin: 0;
+    padding: 0;
+}
 #alertwin{
     text-align: center;
     padding: 30px;
     font-family: Arial, sans-serif;
     display: block;
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     width: 450px;
-    height: 260px;
+    height: fit-content;
     background-color: rgba(27, 25, 23, 0.953);
     animation: animwin 1s ease forwards;
 }
@@ -16,9 +20,11 @@
     100% {top: 10%;}
 }
 #alertwin P{
+    font-size: 16px;
     color: #d8c8bb;
+    padding: 8px;
 }
-.ready-btn{
+#alertwin .ready-btn{
     text-decoration: none;
     margin: 15px 15px 0;
     font-size: 20px;
@@ -32,6 +38,12 @@
     cursor: pointer;
     transition: all .2s ease;
 }
-.ready-btn:hover{
-    background-color: rgb(255, 94, 0);
+#alertwin .ready-btn:hover{
+    background-color: #ff5e00;
+}
+#alertwin .link, #alertwin b {
+    color: white;
+}
+#alertwin .link:hover{
+    color: #ff5e00;
 }

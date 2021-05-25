@@ -1,0 +1,106 @@
+/* font-family: 'Coda', cursive;
+font-family: 'Roboto Mono', monospace; */
+body{
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    background-color: #2f2f2f;
+    color: white;
+}
+h1{
+    color: black;
+    background-color: #dbdb39;
+    font-family: 'Coda', cursive;
+    margin-bottom: 50px;
+}
+.jsis{
+    font-size: 1.2em;
+}
+.jsis b{
+    color: #dbdb39;
+    text-decoration: underline;
+}
+.popular{
+    background-color: black;
+    border: 1px solid #dbdb39;
+    padding: 25px;
+    width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+}
+.popular h3{
+    margin-top: 0;
+}
+.popular p {
+    background-color: #535243;
+    padding: 7px;
+}
+.black{
+    background-color: black;
+    padding: 0 7px;
+}
+
+.jsimg{
+    margin: 30px 0 0;
+}
+.link{
+    margin-top: 70px;
+}
+.link a{
+    color: white;
+    margin: 0 15px;
+}
+.link a.active{
+    color: #dbdb39;
+}
+.jsbook{
+    background-color: #dbdb39;
+    padding: 5px 7px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Coda', cursive;
+    font-size: 1.3em;
+}
+.opolist{
+    background-color: #6b6a65;
+    margin: 20px;
+    padding: 5px 15px;
+}
+.opolist ul{
+    background-color: #e7e7e1;
+    color: black;
+    padding: 7px 40px;
+}
+.opolist li{
+    margin: 7px 0;
+}
+.div1{
+    width: 800px;
+    margin: 0px auto;
+    background-color: black;
+    padding: 15px;
+}
+.div2{
+    border-radius: 15px;
+    background-color: #464319;
+    padding: 15px;
+}
+.div3{
+    border: 2px solid #dbdb39;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+.div2 h4{
+    letter-spacing: 30px;
+    font-family: 'Coda', cursive;
+    font-size: 30px;
+    margin: 0;
+    color: #dbdb39;
+}
+.div2 p{
+    border-radius: 7px;
+    text-align: left;
+    background-color: rgb(151, 147, 106);
+    color: #000000;
+    padding: 5px;
+}

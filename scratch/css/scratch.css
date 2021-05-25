@@ -6,9 +6,13 @@ body{
     font-family: Arial, sans-serif;
     --blue:  #4c97ff;
     --orange: #f9a83a;
+    --lorange: #faf2e4;
+    --lorange2: #fdd48d;
     --yellow: #ffd500;
     --purple: #9966ff;
+    --pink: #cf63cf;
     --redorange: #ff8c1a;
+    --redorange2: #ff661a;
     --green: #4cbf56;
     --lblue: #eaf3ff;
     --lblue2: #a0c5f5;
@@ -23,7 +27,16 @@ body{
 .posR{
     position: relative;
 }
-/* display flex */
+.posA{
+    position: absolute;
+}
+/* display */
+.d-n{
+    display: none;
+}
+.d-b{
+    display: block;
+}
 .d-f{
     display: flex;
 }
@@ -52,12 +65,28 @@ body{
 .h-b:hover{
     filter: brightness(115%);
 }
-/* span plate, bg, colors */
+/* span plate  - btns*/
 .s-plate{
     color: white;
     padding: 7px;
     border-radius: 7px;
 }
+.btn-1{
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: var(--orange);
+}
+.btn-1:hover{
+    filter: brightness(120%);
+}
+.btn-checked{
+    filter: hue-rotate(-170deg);
+}
+/* colors */
 .yellow{
     color: var(--yellow);
 }
@@ -76,6 +105,9 @@ body{
 .purple{
     color: var(--purple);
 }
+.pink{
+    color: var(--pink);
+}
 .redorange{
     color: var(--redorange);
 }
@@ -88,11 +120,15 @@ body{
 .lgray{
     color: var(--lgray);
 }
+/* bg */
 .motion {
     background-color: var(--blue);
 }
 .looks{
     background-color: var(--purple);
+}
+.sound{
+    background-color: var(--pink);
 }
 .events{
     background-color: var(--yellow);
@@ -106,6 +142,9 @@ body{
 .variable{
     background-color: var(--redorange);
 }
+.list{
+    background-color: var(--redorange2);
+}
 .operators{
     background-color: #59c059;
 }
@@ -118,11 +157,36 @@ body{
 .lblue-bg2{
     background-color: var(--lblue2);
 }
+.lorange-bg{
+    background-color: var(--lorange);
+}
+.lorange-bg2{
+    background-color: var(--lorange2);
+}
 .gray-bg{
     background-color: var(--gray);
 }
+/* border */
+.b-l5{
+    border-left: 5px solid var(--orange);
+}
+.b-lb2{
+    border: 1px solid var(--lblue2);
+}
 .b-bor{
     border: 14px solid var(--lblue);
+}
+.b-bor2{
+    border: 14px solid var(--lblue2);
+}
+.b-bor3{
+    border: 14px solid var(--lorange2);
+}
+.b-bor4{
+    border: 10px solid var(--lorange);
+}
+.b-bor5{
+    border: 10px solid var(--lorange1);
 }
 /* text */
 .ta-c{
@@ -146,7 +210,14 @@ body{
 .tt-u{
     text-transform: uppercase;
 }
+/* font-family */
+.f-imp{
+    font-family: Impact, sans-serif;
+}
 /* font size */
+.f-14{
+    font-size: 14px;
+}
 .f-16{
     font-size: 16px;
 }
@@ -164,6 +235,9 @@ body{
 }
 .f-08e{
     font-size: 0.8em;
+}
+.f-1r{
+    font-size: 1rem;
 }
 .f-12r{
     font-size: 1.2rem;
@@ -191,6 +265,10 @@ body{
 }
 .f-5r{
     font-size: 5rem;
+}
+/* text indent */
+.ti{
+    text-indent: 40px;
 }
 /* line height */
 .lh-1r{
@@ -227,6 +305,26 @@ body{
 .mx-a{
     margin-left: auto;
     margin-right: auto;
+}
+.mx-1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mx2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.mx-3{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.mx-4{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.mx-5{
+    margin-left: 50px;
+    margin-right: 50px;
 }
 /* mar top bot */
 .my-1{
